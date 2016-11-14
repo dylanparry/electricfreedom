@@ -10,6 +10,6 @@
     "rimraf": "2.5.2"
   },
   "scripts": {
-    "test": ""
+    "test": "echo Hello from Test"
   }
 }
