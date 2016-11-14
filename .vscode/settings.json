@@ -1,0 +1,11 @@
+{
+  "files.exclude": {
+    "**/project.lock.json": true,
+    "**/node_modules/": true,
+    "**/bin/": true,
+    "**/obj/": true,
+    "**/web.config": true,
+    "**/temp/": true,
+    "**/npm-debug.log*": true
+  }
+}
