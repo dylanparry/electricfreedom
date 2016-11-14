@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace WebApplication.Models.AccountViewModels
+namespace ElectricFreedom.Web.Admin.Models.AccountViewModels
 {
     public class SendCodeViewModel
     {

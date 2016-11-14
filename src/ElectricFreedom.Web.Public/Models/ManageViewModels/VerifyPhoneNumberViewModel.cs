@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication.Models.ManageViewModels
+namespace ElectricFreedom.Web.Public.Models.ManageViewModels
 {
     public class VerifyPhoneNumberViewModel
     {

@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using WebApplication.Models;
+using ElectricFreedom.Web.Scripts.Models;
 
-namespace WebApplication.Data
+namespace ElectricFreedom.Web.Scripts.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

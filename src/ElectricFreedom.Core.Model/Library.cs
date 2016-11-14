@@ -1,4 +1,4 @@
-﻿namespace ClassLibrary
+﻿namespace ElectricFreedom.Core.Model
 {
     public class Class1
     {

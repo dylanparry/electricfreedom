@@ -6,11 +6,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
-using WebApplication.Models;
-using WebApplication.Models.AccountViewModels;
-using WebApplication.Services;
+using ElectricFreedom.Web.Api.Models;
+using ElectricFreedom.Web.Api.Models.AccountViewModels;
+using ElectricFreedom.Web.Api.Services;
 
-namespace WebApplication.Controllers
+namespace ElectricFreedom.Web.Api.Controllers
 {
     [Authorize]
     public class AccountController : Controller

@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace WebApplication.Services
+namespace ElectricFreedom.Web.Public.Services
 {
     public interface ISmsSender
     {

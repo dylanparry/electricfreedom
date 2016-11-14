@@ -112,6 +112,6 @@
     ]
   },
   "tooling": {
-    "defaultNamespace": "WebApplication"
+    "defaultNamespace": "ElectricFreedom.Web.Scripts"
   }
 }

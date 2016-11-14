@@ -1,7 +1,7 @@
 using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace WebApplication.Data.Migrations
+namespace ElectricFreedom.Web.Public.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

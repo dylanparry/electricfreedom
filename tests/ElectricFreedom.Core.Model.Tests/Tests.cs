@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Tests
+namespace ElectricFreedom.Core.Model.Tests
 {
     public class Tests
     {

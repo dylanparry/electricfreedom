@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication.Models.AccountViewModels
+namespace ElectricFreedom.Web.Scripts.Models.AccountViewModels
 {
     public class LoginViewModel
     {

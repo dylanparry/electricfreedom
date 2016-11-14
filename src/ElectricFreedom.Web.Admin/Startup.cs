@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using WebApplication.Data;
-using WebApplication.Models;
-using WebApplication.Services;
+using ElectricFreedom.Web.Admin.Data;
+using ElectricFreedom.Web.Admin.Models;
+using ElectricFreedom.Web.Admin.Services;
 
-namespace WebApplication
+namespace ElectricFreedom.Web.Admin
 {
     public class Startup
     {

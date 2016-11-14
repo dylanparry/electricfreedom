@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace WebApplication.Models.ManageViewModels
+namespace ElectricFreedom.Web.Scripts.Models.ManageViewModels
 {
     public class ConfigureTwoFactorViewModel
     {

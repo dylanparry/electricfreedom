@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace ConsoleApplication
+﻿namespace ElectricFreedom.Console.BufferPoster
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            System.Console.WriteLine("Hello World!");
         }
     }
 }

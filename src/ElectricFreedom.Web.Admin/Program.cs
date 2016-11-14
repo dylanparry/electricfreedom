@@ -1,7 +1,7 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-namespace WebApplication
+namespace ElectricFreedom.Web.Admin
 {
     public class Program
     {

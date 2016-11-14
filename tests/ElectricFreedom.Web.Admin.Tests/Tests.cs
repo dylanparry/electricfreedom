@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Tests
+namespace ElectricFreedom.Web.Admin.Tests
 {
     public class Tests
     {

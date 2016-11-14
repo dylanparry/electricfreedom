@@ -1,4 +1,4 @@
-@using Microsoft.AspNetCore.Identity @using WebApplication.Models @inject SignInManager
+@using Microsoft.AspNetCore.Identity @using ElectricFreedom.Web.Scripts.Models @inject SignInManager
 <ApplicationUser> SignInManager @inject UserManager
     <ApplicationUser> UserManager @if (SignInManager.IsSignedIn(User)) {
         <form asp-controller="Account" asp-action="LogOff" method="post" id="logoutForm" class="navbar-right">

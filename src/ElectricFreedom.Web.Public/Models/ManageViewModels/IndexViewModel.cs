@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Identity;
 
-namespace WebApplication.Models.ManageViewModels
+namespace ElectricFreedom.Web.Public.Models.ManageViewModels
 {
     public class IndexViewModel
     {

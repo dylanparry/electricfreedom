@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApplication.Controllers
+namespace ElectricFreedom.Web.Admin.Controllers
 {
     public class HomeController : Controller
     {

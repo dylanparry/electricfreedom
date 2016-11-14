@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Tests
+namespace ElectricFreedom.Console.BufferPoster.Tests
 {
     public class Tests
     {

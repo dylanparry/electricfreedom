@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Tests
+namespace ElectricFreedom.Web.Api.Tests
 {
     public class Tests
     {

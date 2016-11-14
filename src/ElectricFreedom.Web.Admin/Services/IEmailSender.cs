@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace WebApplication.Services
+namespace ElectricFreedom.Web.Admin.Services
 {
     public interface IEmailSender
     {

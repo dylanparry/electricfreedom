@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication.Models.AccountViewModels
+namespace ElectricFreedom.Web.Public.Models.AccountViewModels
 {
     public class RegisterViewModel
     {

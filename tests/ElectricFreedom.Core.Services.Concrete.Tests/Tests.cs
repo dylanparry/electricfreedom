@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Tests
+namespace ElectricFreedom.Core.Services.Concrete.Tests
 {
     public class Tests
     {

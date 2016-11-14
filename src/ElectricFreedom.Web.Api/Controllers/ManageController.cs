@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using WebApplication.Models;
-using WebApplication.Models.ManageViewModels;
-using WebApplication.Services;
+using ElectricFreedom.Web.Api.Models;
+using ElectricFreedom.Web.Api.Models.ManageViewModels;
+using ElectricFreedom.Web.Api.Services;
 
-namespace WebApplication.Controllers
+namespace ElectricFreedom.Web.Api.Controllers
 {
     [Authorize]
     public class ManageController : Controller

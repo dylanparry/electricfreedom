@@ -1,4 +1,4 @@
-namespace WebApplication.Models.ManageViewModels
+namespace ElectricFreedom.Web.Api.Models.ManageViewModels
 {
     public class RemoveLoginViewModel
     {
