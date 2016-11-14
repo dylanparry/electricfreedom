@@ -4,7 +4,14 @@
     "debugType": "portable",
     "emitEntryPoint": true
   },
-  "dependencies": {},
+  "dependencies": {
+    "ElectricFreedom.Core.Services": {
+      "target": "project"
+    },
+    "ElectricFreedom.Core.Services.Concrete": {
+      "target": "project"
+    }
+  },
   "frameworks": {
     "netcoreapp1.0": {
       "dependencies": {

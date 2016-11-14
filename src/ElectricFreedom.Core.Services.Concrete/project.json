@@ -3,7 +3,14 @@
   "buildOptions": {
     "debugType": "portable"
   },
-  "dependencies": {},
+  "dependencies": {
+    "ElectricFreedom.Core.Data": {
+      "target": "project"
+    },
+    "ElectricFreedom.Core.Services": {
+      "target": "project"
+    }
+  },
   "frameworks": {
     "netstandard1.6": {
       "dependencies": {

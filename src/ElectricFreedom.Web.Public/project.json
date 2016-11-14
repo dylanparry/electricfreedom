@@ -37,6 +37,12 @@
     "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
       "version": "1.0.0-preview2-update1",
       "type": "build"
+    },
+    "ElectricFreedom.Core.Services": {
+      "target": "project"
+    },
+    "ElectricFreedom.Core.Services.Concrete": {
+      "target": "project"
     }
   },
   "tools": {
