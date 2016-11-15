@@ -3,5 +3,9 @@
   "extends": "airbnb", // Inherit from some sensible rules
   "rules": {
     "class-methods-use-this": 0 // Disable this rule as it forces all class methods to use the "this" keyword within them
+  },
+  "env": {
+    "browser": true,
+    "jest": true
   }
 }
