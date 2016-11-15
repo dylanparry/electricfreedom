@@ -73,7 +73,7 @@ const config = [
   {
     // Admin
     entry: {
-      admin: './scripts/admin/bootstrap.jsx',
+      admin: './scripts/admin/src/bootstrap.jsx',
     },
     output: {
       path: 'wwwroot/scripts',
