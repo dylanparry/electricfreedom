@@ -3,9 +3,8 @@
 # npm logs
 npm-debug.log.*
 
-# Test Results from Mocha
-test-results.xml
-**/temp
+# Test Results from Jest
+**/jest/results
 
 # wwwroot directories
 **/wwwroot/lib
