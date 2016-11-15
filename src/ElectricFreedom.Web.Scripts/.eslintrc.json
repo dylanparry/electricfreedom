@@ -1,6 +1,7 @@
 {
-  "extends": "airbnb",
+  "root": true, // This is the top-most config file
+  "extends": "airbnb", // Inherit from some sensible rules
   "rules": {
-    "class-methods-use-this": 0
+    "class-methods-use-this": 0 // Disable this rule as it forces all class methods to use the "this" keyword within them
   }
 }
