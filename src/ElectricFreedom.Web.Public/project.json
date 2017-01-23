@@ -5,6 +5,13 @@
       "version": "1.1.0",
       "type": "platform"
     },
+    "ImageSharp": "1.0.0-alpha1-00071",
+    "ImageSharp.Drawing": "1.0.0-alpha1-00051",
+    "ImageSharp.Formats.Bmp": "1.0.0-alpha1-00051",
+    "ImageSharp.Formats.Gif": "1.0.0-alpha1-00051",
+    "ImageSharp.Formats.Jpeg": "1.0.0-alpha1-00051",
+    "ImageSharp.Formats.Png": "1.0.0-alpha1-00051",
+    "ImageSharp.Processing": "1.0.0-alpha1-00051",
     "Microsoft.AspNetCore.Authentication.Cookies": "1.1.0",
     "Microsoft.AspNetCore.Diagnostics": "1.1.0",
     "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.1.0",
