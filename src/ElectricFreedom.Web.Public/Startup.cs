@@ -41,8 +41,6 @@ namespace ElectricFreedom.Web.Public
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
-                app.UseBrowserLink();
             }
             else
             {
