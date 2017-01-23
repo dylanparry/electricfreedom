@@ -1,8 +1,0 @@
-{
-  "root": true, // This is the top-most config file
-  "extends": "airbnb", // Inherit from some sensible rules
-  "env": {
-    "browser": true,
-    "jest": true
-  }
-}

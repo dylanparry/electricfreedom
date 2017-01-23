@@ -29,5 +29,13 @@
   },
   "jest": {
     "setupTestFrameworkScriptFile": "jest/junit-reporter.js"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "env": {
+      "browser": true,
+      "jest": true
+    }
   }
 }
