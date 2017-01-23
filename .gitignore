@@ -4,7 +4,7 @@
 npm-debug.log.*
 
 # Test Results from Jest
-**/jest/results
+**/jest/results/*.xml
 
 # wwwroot directories
 **/wwwroot/lib
