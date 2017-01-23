@@ -23,6 +23,10 @@ const sharedConfig = {
                         }],
                         'react',
                     ],
+                    plugins: [
+                        'transform-decorators-legacy',
+                        'transform-class-properties',
+                    ],
                 },
             },
         ],
@@ -41,31 +45,6 @@ if (PRODUCTION) {
 
     // Use detailed source maps
     sharedConfig.devtool = 'source-map';
-
-    // Remove duplicated code
-    sharedConfig.plugins.push(new webpack.optimize.DedupePlugin());
-
-    // Uglify the output
-    sharedConfig.plugins.push(new webpack.optimize.UglifyJsPlugin({
-        sourceMap: true,
-        compress: {
-            warnings: false,
-            sequences: true,
-            dead_code: true,
-            conditionals: true,
-            booleans: true,
-            unused: true,
-            if_return: true,
-            join_vars: true,
-            drop_console: true,
-        },
-        mangle: {
-            except: ['exports', 'require'],
-        },
-        output: {
-            comments: false,
-        },
-    }));
 }
 
 // Define entry points, and outputs as an array
