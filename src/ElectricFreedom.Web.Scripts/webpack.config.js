@@ -31,7 +31,6 @@ const sharedConfig = {
       },
     ],
   },
-  plugins: [],
 };
 
 // Change some of the shared config if in production mode
