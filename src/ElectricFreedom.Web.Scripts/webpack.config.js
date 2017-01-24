@@ -33,19 +33,6 @@ const sharedConfig = {
   },
 };
 
-// Change some of the shared config if in production mode
-if (PRODUCTION) {
-  // Ensure we're building in production mode throughout
-  sharedConfig.plugins.push(new webpack.DefinePlugin({
-    'process.env': {
-      NODE_ENV: JSON.stringify('production'),
-    },
-  }));
-
-  // Use detailed source maps
-  sharedConfig.devtool = 'source-map';
-}
-
 // Define entry points, and outputs as an array
 const config = [
   {
@@ -63,6 +50,27 @@ const config = [
 // Loop through the config entries, and extend each object with the shared config
 for (let i = 0; i < config.length; i += 1) {
   Object.assign(config[i], sharedConfig);
+}
+
+// Change some of the shared config if in production mode
+if (PRODUCTION) {
+  // Ensure we're building in production mode throughout
+  for (let i = 0; i < config.length; i += 1) {
+    // Create an empty plugins array if there aren't any existing plugins
+    if (typeof config[i].plugins === 'undefined') {
+      config[i].plugins = [];
+    }
+
+    // Add a define plugin to each config
+    config[i].plugins.push(new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      },
+    }));
+
+    // Use detailed source maps
+    config[i].devtool = 'source-map';
+  }
 }
 
 module.exports = config;
