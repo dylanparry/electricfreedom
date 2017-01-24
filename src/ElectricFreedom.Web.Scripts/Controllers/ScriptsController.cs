@@ -21,7 +21,12 @@ namespace ElectricFreedom.Web.Scripts
             FileInfo fileInfo = new FileInfo(this.hostingEnvironment.WebRootPath + $"/{scriptName}.js");
             DateTime lastUpdated = fileInfo.LastWriteTimeUtc;
 
-            return Redirect($"/{scriptName}.js?" + lastUpdated.ToString("yyyyMMddHHmmss"));
+            if (fileInfo.Exists)
+            {
+                return Redirect($"/{scriptName}.js?" + lastUpdated.ToString("yyyyMMddHHmmss"));
+            }
+
+            return new NotFoundResult();
         }
     }
 }
