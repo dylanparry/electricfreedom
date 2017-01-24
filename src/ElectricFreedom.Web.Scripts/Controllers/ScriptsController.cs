@@ -14,14 +14,14 @@ namespace ElectricFreedom.Web.Scripts
             this.hostingEnvironment = hostingEnvironment;
         }
 
-        [Route("scripts/{scriptName}")]
+        [Route("~/{scriptName}")]
         public IActionResult GetScript(string scriptName)
         {
             // Get the last updated time for the map.js file
-            FileInfo fileInfo = new FileInfo(this.hostingEnvironment.WebRootPath + $"/scripts/{scriptName}.js");
+            FileInfo fileInfo = new FileInfo(this.hostingEnvironment.WebRootPath + $"/{scriptName}.js");
             DateTime lastUpdated = fileInfo.LastWriteTimeUtc;
 
-            return Redirect($"/scripts/{scriptName}.js?" + lastUpdated.ToString("yyyyMMddHHmmss"));
+            return Redirect($"/{scriptName}.js?" + lastUpdated.ToString("yyyyMMddHHmmss"));
         }
     }
 }

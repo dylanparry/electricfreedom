@@ -55,7 +55,7 @@ const config = [
       admin: './scripts/admin/src/bootstrap.jsx',
     },
     output: {
-      path: 'wwwroot/scripts',
+      path: 'wwwroot',
       filename: '[name].js',
     },
   },
