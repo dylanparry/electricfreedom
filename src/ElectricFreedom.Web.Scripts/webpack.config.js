@@ -31,6 +31,15 @@ const sharedConfig = {
       },
     ],
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
+  },
+  performance: {
+    // Change performance hints in dev mode
+    hints: PRODUCTION ? 'warning' : false,
+    maxEntrypointSize: PRODUCTION ? 250000 : 1000000,
+    maxAssetSize: PRODUCTION ? 250000 : 1000000,
+  },
 };
 
 // Define entry points, and outputs as an array
@@ -39,11 +48,23 @@ const config = [
     // Admin
     entry: {
       admin: './scripts/admin/src/bootstrap.jsx',
+      'admin-libs': [
+        'axios',
+        'mobx',
+        'mobx-react',
+        'react',
+        'react-dom',
+      ],
     },
     output: {
       path: 'wwwroot',
       filename: '[name].js',
     },
+    plugins: [
+      new webpack.optimize.CommonsChunkPlugin({
+        name: 'admin-libs',
+      }),
+    ],
   },
 ];
 
