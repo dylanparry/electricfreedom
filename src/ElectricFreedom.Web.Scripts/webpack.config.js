@@ -14,7 +14,7 @@ const sharedConfig = {
         test: /\.jsx?/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        options: { // Override .babelrc to use ES2015 module syntax for tree shaking
+        options: { // Override babel config to use ES2015 module syntax for tree shaking
           presets: [
             ['latest', {
               es2015: {

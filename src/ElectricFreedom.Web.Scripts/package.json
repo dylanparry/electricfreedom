@@ -38,5 +38,19 @@
       "browser": true,
       "jest": true
     }
+  },
+  "babel": {
+    "presets": [
+      [
+        "latest"
+      ],
+      [
+        "react"
+      ]
+    ],
+    "plugins": [
+      "transform-decorators-legacy",
+      "transform-class-properties"
+    ]
   }
 }
