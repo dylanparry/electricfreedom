@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Text;
+using ElectricFreedom.Core.Model.JoinTables;
 
 namespace ElectricFreedom.Core.Model
 {
@@ -117,5 +119,9 @@ namespace ElectricFreedom.Core.Model
                 return age;
             }
         }
+
+        // Relationships:
+
+        public virtual ICollection<ArtistTag> ArtistTags { get; set; } // TODO: Remove this when Entity Framework Core supports Many-to-Many mappings
     }
 }

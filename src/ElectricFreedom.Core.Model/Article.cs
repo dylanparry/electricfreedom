@@ -1,7 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
+using ElectricFreedom.Core.Model.JoinTables;
 
 namespace ElectricFreedom.Core.Model
 {
@@ -76,5 +78,9 @@ namespace ElectricFreedom.Core.Model
 
             return sb.ToString();
         }
+
+        // Relationships:
+
+        public virtual ICollection<ArticleKeyword> ArticleKeywords { get; set; } // TODO: Remove this when Entity Framework Core supports Many-to-Many mappings
     }
 }
