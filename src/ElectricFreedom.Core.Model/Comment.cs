@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ElectricFreedom.Core.Model
 {
@@ -13,5 +14,10 @@ namespace ElectricFreedom.Core.Model
         public DateTimeOffset Created { get; set; }
 
         public bool IsFlagged { get; set; }
+
+        // Relationships:
+
+        public virtual Comment Parent { get; set; }
+        public virtual ICollection<Comment> Replies { get; set; }
     }
 }

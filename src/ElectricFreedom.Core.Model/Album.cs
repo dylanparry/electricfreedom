@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ElectricFreedom.Core.Model
 {
@@ -29,5 +30,11 @@ namespace ElectricFreedom.Core.Model
         public bool HasImage { get; set; }
 
         public DateTimeOffset Created { get; set; }
+
+        // Relationships:
+
+        public virtual Artist Artist { get; set; }
+        public virtual AlbumImage Image { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
     }
 }

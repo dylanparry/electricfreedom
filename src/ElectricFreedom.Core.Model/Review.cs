@@ -66,5 +66,9 @@ namespace ElectricFreedom.Core.Model
 
             return sb.ToString();
         }
+
+        // Relationships:
+
+        public virtual Album Album { get; set; }
     }
 }

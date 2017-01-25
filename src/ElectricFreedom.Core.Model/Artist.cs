@@ -122,6 +122,9 @@ namespace ElectricFreedom.Core.Model
 
         // Relationships:
 
+        public virtual Country Country { get; set; }
+        public virtual ArtistImage Image { get; set; }
+        public virtual ICollection<Album> Albums { get; set; }
         public virtual ICollection<ArtistTag> ArtistTags { get; set; } // TODO: Remove this when Entity Framework Core supports Many-to-Many mappings
     }
 }

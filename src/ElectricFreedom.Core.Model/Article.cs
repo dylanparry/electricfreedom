@@ -81,6 +81,8 @@ namespace ElectricFreedom.Core.Model
 
         // Relationships:
 
+        public virtual ArticleImage Image { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
         public virtual ICollection<ArticleKeyword> ArticleKeywords { get; set; } // TODO: Remove this when Entity Framework Core supports Many-to-Many mappings
     }
 }
