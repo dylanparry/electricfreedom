@@ -9,7 +9,7 @@ namespace ElectricFreedom.Core.Model
     {
         public int Id { get; set; }
 
-        public string UserId { get; set; } // TODO: Is the user ID necessary? Can we have a User property instead?
+        public string UserId { get; set; } // TODO: Change this to a User property
 
         public int Rating { get; set; }
 
