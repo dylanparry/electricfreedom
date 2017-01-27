@@ -34,12 +34,6 @@ const sharedConfig = {
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
   },
-  performance: {
-    // Change performance hints in dev mode
-    hints: PRODUCTION ? 'warning' : false,
-    maxEntrypointSize: PRODUCTION ? 250000 : 1000000,
-    maxAssetSize: PRODUCTION ? 250000 : 1000000,
-  },
 };
 
 // Define entry points, and outputs as an array
@@ -54,6 +48,7 @@ const config = [
         'mobx-react',
         'react',
         'react-dom',
+        'styled-components',
       ],
     },
     output: {
