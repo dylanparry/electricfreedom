@@ -1,3 +1,4 @@
+using ElectricFreedom.Core.Data.Configuration;
 using ElectricFreedom.Core.Model;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,6 +20,9 @@ namespace ElectricFreedom.Core.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            // Configure entities
+            Configure.ConfigureArtists(modelBuilder);
         }
     }
 }
