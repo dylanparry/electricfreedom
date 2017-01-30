@@ -9,5 +9,11 @@
   },
   "editor.rulers": [
     100
+  ],
+  "auto-run-command.rules": [
+    {
+      "command": "wallaby.start",
+      "condition": "always"
+    }
   ]
 }
