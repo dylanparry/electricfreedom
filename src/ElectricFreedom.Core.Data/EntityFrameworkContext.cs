@@ -22,6 +22,7 @@ namespace ElectricFreedom.Core.Data
             base.OnModelCreating(modelBuilder);
 
             // Configure entities
+            Configure.ConfigureAlbums(modelBuilder);
             Configure.ConfigureArtists(modelBuilder);
             Configure.ConfigureCountries(modelBuilder);
         }
