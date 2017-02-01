@@ -27,6 +27,7 @@ namespace ElectricFreedom.Core.Data
             Configure.ConfigureArtists(modelBuilder);
             Configure.ConfigureComments(modelBuilder);
             Configure.ConfigureCountries(modelBuilder);
+            Configure.ConfigureKeywords(modelBuilder);
         }
     }
 }
