@@ -29,6 +29,7 @@ namespace ElectricFreedom.Core.Data
             Configure.ConfigureCountries(modelBuilder);
             Configure.ConfigureKeywords(modelBuilder);
             Configure.ConfigureReviews(modelBuilder);
+            Configure.ConfigureTags(modelBuilder);
         }
     }
 }
