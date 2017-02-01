@@ -4,6 +4,13 @@
     "debugType": "portable"
   },
   "dependencies": {
+    "ImageSharp": "1.0.0-alpha1-00102",
+    "ImageSharp.Drawing": "1.0.0-alpha1-00082",
+    "ImageSharp.Formats.Bmp": "1.0.0-alpha1-00082",
+    "ImageSharp.Formats.Gif": "1.0.0-alpha1-00082",
+    "ImageSharp.Formats.Jpeg": "1.0.0-alpha1-00082",
+    "ImageSharp.Formats.Png": "1.0.0-alpha1-00082",
+    "ImageSharp.Processing": "1.0.0-alpha1-00082",
     "ElectricFreedom.Core.Data": {
       "target": "project"
     },
