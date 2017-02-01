@@ -30,6 +30,10 @@ namespace ElectricFreedom.Core.Data
             Configure.ConfigureKeywords(modelBuilder);
             Configure.ConfigureReviews(modelBuilder);
             Configure.ConfigureTags(modelBuilder);
+
+            // TODO: This won't be necessary when EFCore supports many-to-many relationships
+            // Configure join tables
+            Configure.ConfigureJoinTables(modelBuilder);
         }
     }
 }
