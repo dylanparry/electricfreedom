@@ -2,7 +2,7 @@ using ElectricFreedom.Core.Data.Configuration;
 using ElectricFreedom.Core.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace ElectricFreedom.Core.Data
+namespace ElectricFreedom.Core.Data.Isfrastructure
 {
     public class EntityFrameworkContext : DbContext
     {
