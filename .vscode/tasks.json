@@ -1,0 +1,36 @@
+{
+  "version": "0.1.0",
+  "_runner": "terminal",
+  "tasks": [
+    {
+      "taskName": "yarn-dev",
+      "command": "cd ./src/electricfreedom.web.scripts; yarn dev",
+      "isShellCommand": true,
+      "isBackground": true
+    },
+    {
+      "taskName": "dotnet-run-admin",
+      "command": "dotnet run --project ./src/electricfreedom.web.admin",
+      "isShellCommand": true,
+      "isBackground": true
+    },
+    {
+      "taskName": "dotnet-run-api",
+      "command": "dotnet run --project ./src/electricfreedom.web.api",
+      "isShellCommand": true,
+      "isBackground": true
+    },
+    {
+      "taskName": "dotnet-run-public",
+      "command": "dotnet run --project ./src/electricfreedom.web.public",
+      "isShellCommand": true,
+      "isBackground": true
+    },
+    {
+      "taskName": "dotnet-run-scripts",
+      "command": "dotnet run --project ./src/electricfreedom.web.scripts",
+      "isShellCommand": true,
+      "isBackground": true
+    }
+  ]
+}
