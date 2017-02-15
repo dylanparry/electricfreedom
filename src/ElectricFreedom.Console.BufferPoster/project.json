@@ -8,7 +8,7 @@
     "ElectricFreedom.Core.Services": {
       "target": "project"
     },
-    "ElectricFreedom.Core.Services.Concrete": {
+    "ElectricFreedom.Core.Services.Interfaces": {
       "target": "project"
     }
   },

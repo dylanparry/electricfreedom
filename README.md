@@ -21,13 +21,13 @@ EF Core (Root Directory)
     |       |       |
     |       |       |-- Configuration (Entity Framework Configuration)
     |       |       |
-    |       |       '-- Infrastructure (DBContext, Unit of Work, etc)
+    |       |       '-- Infrastructure (DBContext, etc)
     |       |
     |       |-- ElectricFreedom.Core.Model (Entities)
     |       |
-    |       |-- ElectricFreedom.Core.Services (Interfaces for BLL/External APIs/etc) *
+    |       |-- ElectricFreedom.Core.Services (Implementation of Services)
     |       |
-    |       |-- ElectricFreedom.Core.Services.Concrete (Implementation of Services)
+    |       |-- ElectricFreedom.Core.Services.Interfares (Interfaces for BLL/External APIs/etc) *
     |       |
     |       |-- ElectricFreedom.Web.Admin (Admin Site)
     |       |
@@ -43,7 +43,7 @@ EF Core (Root Directory)
             |
             |-- ElectricFreedom.Core.Model.Tests
             |
-            |-- ElectricFreedom.Core.Services.Concrete.Tests
+            |-- ElectricFreedom.Core.Services.Tests
             |
             |-- ElectricFreedom.Web.Admin.Tests
             |

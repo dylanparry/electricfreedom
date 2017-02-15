@@ -1,4 +1,4 @@
-﻿namespace ElectricFreedom.Core.Services
+﻿namespace ElectricFreedom.Core.Services.Concrete
 {
     public class Class1
     {
