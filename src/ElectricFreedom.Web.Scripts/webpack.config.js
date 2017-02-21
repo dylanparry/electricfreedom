@@ -46,6 +46,7 @@ const config = [
         'axios',
         'mobx',
         'mobx-react',
+        'mobx-router',
         'react',
         'react-dom',
         'styled-components',
