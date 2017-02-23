@@ -10,7 +10,7 @@
     },
     {
       "taskName": "dotnet-run-admin",
-      "command": "cd ./src/electricfreedom.web.admin; dotnet watch run --project",
+      "command": "cd ./src/electricfreedom.web.admin; dotnet watch run",
       "isShellCommand": true,
       "isBackground": true
     },
