@@ -10,25 +10,25 @@
     },
     {
       "taskName": "dotnet-run-admin",
-      "command": "dotnet run --project ./src/electricfreedom.web.admin",
+      "command": "cd ./src/electricfreedom.web.admin; dotnet watch run --project",
       "isShellCommand": true,
       "isBackground": true
     },
     {
       "taskName": "dotnet-run-api",
-      "command": "dotnet run --project ./src/electricfreedom.web.api",
+      "command": "cd ./src/electricfreedom.web.api; dotnet watch run",
       "isShellCommand": true,
       "isBackground": true
     },
     {
       "taskName": "dotnet-run-public",
-      "command": "dotnet run --project ./src/electricfreedom.web.public",
+      "command": "cd ./src/electricfreedom.web.public; dotnet watch run",
       "isShellCommand": true,
       "isBackground": true
     },
     {
       "taskName": "dotnet-run-scripts",
-      "command": "dotnet run --project ./src/electricfreedom.web.scripts",
+      "command": "cd ./src/electricfreedom.web.scripts; dotnet watch run",
       "isShellCommand": true,
       "isBackground": true
     }
