@@ -4,9 +4,10 @@ namespace ElectricFreedom.Web.Public.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        [Route("{*catchall}")]
+        public IActionResult Index()
         {
-            return "Hello from the Public project";
+            return View();
         }
     }
 }
