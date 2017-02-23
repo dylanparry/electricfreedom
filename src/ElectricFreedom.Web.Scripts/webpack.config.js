@@ -26,6 +26,7 @@ const sharedConfig = {
           plugins: [
             'transform-decorators-legacy',
             'transform-class-properties',
+            'transform-runtime',
           ],
         },
       },
