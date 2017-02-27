@@ -4,6 +4,7 @@ import { Provider } from 'mobx-react';
 import { MobxRouter, RouterStore, startRouter } from 'mobx-router';
 
 import routes from './config/routes';
+import Layout from './views/shared/layout';
 
 const store = {
   router: new RouterStore(),
@@ -13,7 +14,9 @@ startRouter(routes, store);
 
 ReactDOM.render(
   <Provider store={store}>
-    <MobxRouter />
+    <Layout>
+      <MobxRouter />
+    </Layout>
   </Provider>,
   document.getElementById('app'),
 );
