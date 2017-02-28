@@ -23,7 +23,7 @@ cache:
     - $HOME/.yarn-cache
 install:
   - dotnet restore
-#   - cd ./src/ElectricFreedom.Web.Scripts && yarn
+  - cd ./src/ElectricFreedom.Web.Scripts && yarn && cd ../../
 script:
   - dotnet build **/project.json
-#   - cd ./src/ElectricFreedom.Web.Scripts && yarn test
+  - cd ./src/ElectricFreedom.Web.Scripts && yarn test
