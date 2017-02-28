@@ -19,9 +19,9 @@ before_install:
 cache:
   directories:
     - $HOME/.yarn-cache
-install:
-  - cd ./src/ElectricFreedom.Web.Scripts && yarn
+# install:
+#   - cd ./src/ElectricFreedom.Web.Scripts && yarn
 script:
   - dotnet restore
   - dotnet build **/project.json
-  - cd ./src/ElectricFreedom.Web.Scripts && yarn test
+#   - cd ./src/ElectricFreedom.Web.Scripts && yarn test
