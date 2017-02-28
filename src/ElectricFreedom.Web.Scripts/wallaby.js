@@ -3,13 +3,13 @@ module.exports = function wallabyConfig(wallaby) {
     files: [
       'scripts/**/*.js',
       'scripts/**/*.jsx',
-      '!scripts/**/tests/*.js',
-      '!scripts/**/tests/*.jsx',
+      '!scripts/**/tests/**/*.js',
+      '!scripts/**/tests/**/*.jsx',
     ],
 
     tests: [
-      'scripts/**/tests/*.js',
-      'scripts/**/tests/*.jsx',
+      'scripts/**/tests/**/*.js',
+      'scripts/**/tests/**/*.jsx',
     ],
 
     compilers: {
