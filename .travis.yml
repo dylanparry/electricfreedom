@@ -19,7 +19,7 @@ before_install:
 cache: yarn
 script:
   # Restore dotnet projects and build
-  - dotnet restore && dotnet build
+  - dotnet restore --configfile ./nuget.config && dotnet build
   # Loop through test projects and run tests
   - for file in tests/**/*.csproj; do dotnet test $file; done
   # Restore Yarn packages and run tests
