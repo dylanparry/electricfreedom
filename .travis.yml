@@ -15,12 +15,12 @@ before_install:
   - sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
   - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
   - sudo apt-get update
-  - sudo apt-get install dotnet-dev-1.0.0-preview2.1-003177
+  - sudo apt-get install dotnet-dev-1.0.0-rc4-004771
 cache: yarn
 script:
   # Restore dotnet projects and build
-  - dotnet restore && dotnet build **/project.json
+  - dotnet restore && dotnet build
   # Loop through test projects and run tests
-  - for file in tests/**/project.json; do dotnet test $file; done
+  - for file in tests/**/*.csproj; do dotnet test $file; done
   # Restore Yarn packages and run tests
   - cd ./src/ElectricFreedom.Web.Scripts && yarn --ignore-optional && yarn test
