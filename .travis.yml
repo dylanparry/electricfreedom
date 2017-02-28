@@ -3,6 +3,8 @@ dist: trusty
 language: node_js
 node_js:
   - "node"
+env:
+  - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
 before_install:
   # Set execute permissions for build script
   - chmod +x ./build.sh
