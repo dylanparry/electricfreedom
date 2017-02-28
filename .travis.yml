@@ -15,7 +15,7 @@ cache:
   directories:
     - $HOME/.yarn-cache
 install:
-  - cd ./src/electricfreedom.web.scripts && yarn
+  - cd ./src/ElectricFreedom.Web.Scripts && yarn
 script:
   - ./build.sh --quiet verify
-  - cd ./src/electricfreedom.web.scripts && yarn test
+  - cd ./src/ElectricFreedom.Web.Scripts && yarn test
