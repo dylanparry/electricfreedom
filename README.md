@@ -1,4 +1,7 @@
-# Electric Freedom Core
+# Electric Freedom Core [![Travis][build-badge]][build]
+
+[build-badge]: https://img.shields.io/travis/dylanparry/electricfreedom/master.svg?style=flat-square
+[build]: https://travis-ci.org/dylanparry/electricfreedom
 
 Electric Freedom Core is a reworking of Electric Freedom as an ASP.NET Core Application with a React/MobX interface for the admin console.
 
