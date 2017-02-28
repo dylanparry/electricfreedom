@@ -3,9 +3,6 @@
 # npm logs
 npm-debug.log.*
 
-# Test Results from Jest
-**/jest/results/*.xml
-
 # wwwroot directories
 **/wwwroot/lib
 !wwwroot/lib/ckeditorplugins
