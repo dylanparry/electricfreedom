@@ -1,8 +1,5 @@
-language: csharp
-dist: trusty
+language: nodejs
 sudo: required
-mono: none
-dotnet: 1.0.0-preview2-1-003177
 before_install:
   # Set execute permissions for build script
   - chmod +x ./build.sh
@@ -11,11 +8,17 @@ before_install:
   - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
   - sudo apt-get update -qq
   - sudo apt-get install -y -qq yarn
+  # Repo for dotnet
+  - sudo apt-get install curl libunwind8 gettext
+  - curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?LinkID=835021
+  - sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
+  - sudo ln -s /opt/dotnet/dotnet /usr/local/bin
 cache:
   directories:
     - $HOME/.yarn-cache
 install:
   - cd ./src/ElectricFreedom.Web.Scripts && yarn
 script:
-  - ./build.sh --quiet verify
+  - dotnet restore
+  - dotnet build **/project.json
   - cd ./src/ElectricFreedom.Web.Scripts && yarn test
