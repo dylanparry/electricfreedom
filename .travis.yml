@@ -26,4 +26,5 @@ install:
   - cd ./src/ElectricFreedom.Web.Scripts && yarn && cd ../../
 script:
   - dotnet build **/project.json
+  - for file in tests/**/project.json; do dotnet test $file; done
   - cd ./src/ElectricFreedom.Web.Scripts && yarn test
