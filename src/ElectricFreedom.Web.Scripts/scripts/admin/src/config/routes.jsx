@@ -13,14 +13,14 @@ const routes = {
     component: <p>Artists Index</p>,
   }),
 
-  artistEdit: new Route({
-    path: '/artists/:artistId',
-    component: <p>Edit Artist</p>,
-  }),
-
   artistAdd: new Route({
     path: '/artists/add',
     component: <p>New Artist</p>,
+  }),
+
+  artistEdit: new Route({
+    path: '/artists/:artistId',
+    component: <p>Edit Artist</p>,
   }),
 
   albumIndex: new Route({
@@ -28,14 +28,14 @@ const routes = {
     component: <p>Albums Index</p>,
   }),
 
-  albumEdit: new Route({
-    path: '/artists/:artistId/albums/:albumId',
-    component: <p>Edit Album</p>,
-  }),
-
   albumAdd: new Route({
     path: '/artists/:artistId/albums/add',
     component: <p>New Album</p>,
+  }),
+
+  albumEdit: new Route({
+    path: '/artists/:artistId/albums/:albumId',
+    component: <p>Edit Album</p>,
   }),
 
   articleIndex: new Route({
@@ -43,14 +43,14 @@ const routes = {
     component: <p>Articles Index</p>,
   }),
 
-  articleEdit: new Route({
-    path: '/articles/:articleId',
-    component: <p>Edit Article</p>,
-  }),
-
   articleAdd: new Route({
     path: '/articles/add',
     component: <p>New Article</p>,
+  }),
+
+  articleEdit: new Route({
+    path: '/articles/:articleId',
+    component: <p>Edit Article</p>,
   }),
 
   tagIndex: new Route({
@@ -58,14 +58,14 @@ const routes = {
     component: <p>Tags Index</p>,
   }),
 
-  tagEdit: new Route({
-    path: '/tags/:tagId',
-    component: <p>Edit Tag</p>,
-  }),
-
   tagAdd: new Route({
     path: '/tags/add',
     component: <p>New Tag</p>,
+  }),
+
+  tagEdit: new Route({
+    path: '/tags/:tagId',
+    component: <p>Edit Tag</p>,
   }),
 
   reviewIndex: new Route({
