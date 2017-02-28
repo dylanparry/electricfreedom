@@ -20,7 +20,7 @@ describe('<Link /> component', () => {
 
   it('Renders a basic link with correct path and text', () => {
     const sut = shallow(
-      <Link view={routes.basic} store={store}>Test Link</Link>
+      <Link view={routes.basic} store={store}>Test Link</Link>,
     );
 
     expect(sut.html()).toBe('<a href="/test">Test Link</a>');
@@ -28,7 +28,7 @@ describe('<Link /> component', () => {
 
   it('Renders a paramaterised link with correct path and text', () => {
     const sut = shallow(
-      <Link view={routes.withParams} params={{ param: 123 }} store={store}>Test Link</Link>
+      <Link view={routes.withParams} params={{ param: 123 }} store={store}>Test Link</Link>,
     );
 
     expect(sut.html()).toBe('<a href="/test/123">Test Link</a>');
