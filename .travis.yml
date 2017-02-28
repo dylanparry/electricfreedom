@@ -6,8 +6,6 @@ node_js:
 env:
   - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
 before_install:
-  # Set execute permissions for build script
-  - chmod +x ./build.sh
   # Repo for Yarn
   - sudo apt-key adv --fetch-keys http://dl.yarnpkg.com/debian/pubkey.gpg
   - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
