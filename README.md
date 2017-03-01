@@ -17,43 +17,55 @@ EF Core (Root Directory)
     |
     |-- src (Directory)
     |       |
-    |       |-- ElectricFreedom.Console.BufferPoster (Console app for posting to Buffer)
-    |       |
-    |       |-- ElectricFreedom.Core.Data (DAL) *
+    |       |-- console (Directory)
     |       |       |
-    |       |       |-- Configuration (Entity Framework Configuration)
+    |       |       '-- ElectricFreedom.Console.BufferPoster (Console app for posting to Buffer)
+    |       |
+    |       |-- core (Directory)
     |       |       |
-    |       |       '-- Infrastructure (DBContext, etc)
+    |       |       |-- ElectricFreedom.Core.Data (DAL) *
+    |       |       |       |
+    |       |       |       |-- Configuration (Entity Framework Configuration)
+    |       |       |       |
+    |       |       |       '-- Infrastructure (DBContext, etc)
+    |       |       |
+    |       |       |-- ElectricFreedom.Core.Model (Entities)
+    |       |       |
+    |       |       |-- ElectricFreedom.Core.Services.Interfares (Interfaces for BLL/External APIs/etc) *
+    |       |       |
+    |       |       '-- ElectricFreedom.Core.Services (Implementation of Services)
     |       |
-    |       |-- ElectricFreedom.Core.Model (Entities)
-    |       |
-    |       |-- ElectricFreedom.Core.Services.Interfares (Interfaces for BLL/External APIs/etc) *
-    |       |
-    |       |-- ElectricFreedom.Core.Services (Implementation of Services)
-    |       |
-    |       |-- ElectricFreedom.Web.Admin (Admin Site)
-    |       |
-    |       |-- ElectricFreedom.Web.Api (WebAPI with CORS)
-    |       |
-    |       |-- ElectricFreedom.Web.Public (Public Site)
-    |       |
-    |       '-- ElectricFreedom.Web.Scripts (JavaScript Projects)
+    |       '-- web (Directory)
+    |               |
+    |               |-- ElectricFreedom.Web.Admin (Admin Site)
+    |               |
+    |               |-- ElectricFreedom.Web.Api (WebAPI with CORS)
+    |               |
+    |               |-- ElectricFreedom.Web.Public (Public Site)
+    |               |
+    |               '-- ElectricFreedom.Web.Scripts (JavaScript Projects)
     |
     '-- tests (Directory)
             |
-            |-- ElectricFreedom.Console.BufferPoster.Tests
+            |-- console (Directory)
+            |       |
+            |       '-- ElectricFreedom.Console.BufferPoster.Tests
             |
-            |-- ElectricFreedom.Core.Model.Tests
+            |-- core (Directory)
+            |       |
+            |       |-- ElectricFreedom.Core.Model.Tests
+            |       |
+            |       '-- ElectricFreedom.Core.Services.Tests
             |
-            |-- ElectricFreedom.Core.Services.Tests
-            |
-            |-- ElectricFreedom.Web.Admin.Tests
-            |
-            |-- ElectricFreedom.Web.Api.Tests
-            |
-            |-- ElectricFreedom.Web.Public.Tests
-            |
-            '-- ElectricFreedom.Web.Scripts.Tests
+            '-- web (Directory)
+                    |
+                    |-- ElectricFreedom.Web.Admin.Tests
+                    |
+                    |-- ElectricFreedom.Web.Api.Tests
+                    |
+                    |-- ElectricFreedom.Web.Public.Tests
+                    |
+                    '-- ElectricFreedom.Web.Scripts.Tests
 ```
 
 \* Projects that **don't require testing** as they are either for interfaces, configuration, or consist entirely of code that is already heavily tested by Microsoft (eg. Entity Framework)
