@@ -9,7 +9,7 @@
         <RuntimeFrameworkVersion>1.1.0</RuntimeFrameworkVersion>
     </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="..\..\src\ElectricFreedom.Web.Scripts\project.csproj" />
+        <ProjectReference Include="..\..\..\src\web\ElectricFreedom.Web.Scripts\project.csproj" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0-preview-20170106-08" />

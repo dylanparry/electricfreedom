@@ -2,14 +2,14 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp1.1</TargetFramework>
         <DebugType>portable</DebugType>
-        <AssemblyName>ElectricFreedom.Web.Api.Tests</AssemblyName>
-        <PackageId>ElectricFreedom.Web.Api.Tests</PackageId>
+        <AssemblyName>ElectricFreedom.Web.Public.Tests</AssemblyName>
+        <PackageId>ElectricFreedom.Web.Public.Tests</PackageId>
         <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
         <PackageTargetFallback>$(PackageTargetFallback);dotnet5.4;portable-net451+win8</PackageTargetFallback>
         <RuntimeFrameworkVersion>1.1.0</RuntimeFrameworkVersion>
     </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="..\..\src\ElectricFreedom.Web.Api\project.csproj" />
+        <ProjectReference Include="..\..\..\src\web\ElectricFreedom.Web.Public\project.csproj" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0-preview-20170106-08" />

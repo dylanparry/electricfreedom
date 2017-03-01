@@ -5,39 +5,39 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FA2EABE3-2A86-4F23-98A7-67B621E4139A}"
 EndProject
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Console.BufferPoster", "src\ElectricFreedom.Console.BufferPoster\project.csproj", "{E642DEDA-B11F-4C73-B2D8-B03C57BA7666}"
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Console.BufferPoster", "src\console\ElectricFreedom.Console.BufferPoster\project.csproj", "{E642DEDA-B11F-4C73-B2D8-B03C57BA7666}"
 EndProject
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Core.Data", "src\ElectricFreedom.Core.Data\project.csproj", "{4B4FAE98-B480-4982-B6F1-A9FD43583EF6}"
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Core.Data", "src\core\ElectricFreedom.Core.Data\project.csproj", "{4B4FAE98-B480-4982-B6F1-A9FD43583EF6}"
 EndProject
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Core.Model", "src\ElectricFreedom.Core.Model\project.csproj", "{FF030293-A8B2-4647-94A3-93A5A964789A}"
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Core.Model", "src\core\ElectricFreedom.Core.Model\project.csproj", "{FF030293-A8B2-4647-94A3-93A5A964789A}"
 EndProject
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Core.Services", "src\ElectricFreedom.Core.Services\project.csproj", "{997BF97B-6EEC-4BB1-B64B-FFF8369C9372}"
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Core.Services", "src\core\ElectricFreedom.Core.Services\project.csproj", "{997BF97B-6EEC-4BB1-B64B-FFF8369C9372}"
 EndProject
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Core.Services.Interfaces", "src\ElectricFreedom.Core.Services.Interfaces\project.csproj", "{F6E4C412-A9F9-4EF9-8467-72764F236328}"
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Core.Services.Interfaces", "src\core\ElectricFreedom.Core.Services.Interfaces\project.csproj", "{F6E4C412-A9F9-4EF9-8467-72764F236328}"
 EndProject
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Web.Admin", "src\ElectricFreedom.Web.Admin\project.csproj", "{1996F196-01C4-4A4E-A741-9C110F1DF91F}"
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Web.Admin", "src\web\ElectricFreedom.Web.Admin\project.csproj", "{1996F196-01C4-4A4E-A741-9C110F1DF91F}"
 EndProject
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Web.Api", "src\ElectricFreedom.Web.Api\project.csproj", "{EDD5D12E-77AE-4FC6-B84C-FC355EAED1B0}"
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Web.Api", "src\web\ElectricFreedom.Web.Api\project.csproj", "{EDD5D12E-77AE-4FC6-B84C-FC355EAED1B0}"
 EndProject
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Web.Public", "src\ElectricFreedom.Web.Public\project.csproj", "{27660D7F-8B1E-4171-B2C1-52C28C976BBB}"
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Web.Public", "src\web\ElectricFreedom.Web.Public\project.csproj", "{27660D7F-8B1E-4171-B2C1-52C28C976BBB}"
 EndProject
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Web.Scripts", "src\ElectricFreedom.Web.Scripts\project.csproj", "{F6D03A6F-9A50-4FE5-90FA-1E84152AED1F}"
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Web.Scripts", "src\web\ElectricFreedom.Web.Scripts\project.csproj", "{F6D03A6F-9A50-4FE5-90FA-1E84152AED1F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{80E1FB6A-11BA-416B-A96E-09DBDA0BCF33}"
 EndProject
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Console.BufferPoster.Tests", "tests\ElectricFreedom.Console.BufferPoster.Tests\project.csproj", "{21309FC2-DC7E-4FFC-AFE8-23256449BABA}"
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Console.BufferPoster.Tests", "tests\console\ElectricFreedom.Console.BufferPoster.Tests\project.csproj", "{21309FC2-DC7E-4FFC-AFE8-23256449BABA}"
 EndProject
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Core.Model.Tests", "tests\ElectricFreedom.Core.Model.Tests\project.csproj", "{020112A6-8450-4A10-8FE5-99819E50B491}"
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Core.Model.Tests", "tests\core\ElectricFreedom.Core.Model.Tests\project.csproj", "{020112A6-8450-4A10-8FE5-99819E50B491}"
 EndProject
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Core.Services.Tests", "tests\ElectricFreedom.Core.Services.Tests\project.csproj", "{88B030C1-047C-4979-B22D-CA57FB89DDAE}"
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Core.Services.Tests", "tests\core\ElectricFreedom.Core.Services.Tests\project.csproj", "{88B030C1-047C-4979-B22D-CA57FB89DDAE}"
 EndProject
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Web.Admin.Tests", "tests\ElectricFreedom.Web.Admin.Tests\project.csproj", "{6ED1E0E8-BF60-4827-91AE-9DF6A62BF1D9}"
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Web.Admin.Tests", "tests\web\ElectricFreedom.Web.Admin.Tests\project.csproj", "{6ED1E0E8-BF60-4827-91AE-9DF6A62BF1D9}"
 EndProject
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Web.Api.Tests", "tests\ElectricFreedom.Web.Api.Tests\project.csproj", "{FF172537-B90C-4EEC-BDB3-61D7444021B0}"
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Web.Api.Tests", "tests\web\ElectricFreedom.Web.Api.Tests\project.csproj", "{FF172537-B90C-4EEC-BDB3-61D7444021B0}"
 EndProject
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Web.Public.Tests", "tests\ElectricFreedom.Web.Public.Tests\project.csproj", "{3B369CCD-830F-4BA9-888B-ECFB129AD831}"
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Web.Public.Tests", "tests\web\ElectricFreedom.Web.Public.Tests\project.csproj", "{3B369CCD-830F-4BA9-888B-ECFB129AD831}"
 EndProject
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Web.Scripts.Tests", "tests\ElectricFreedom.Web.Scripts.Tests\project.csproj", "{1D8E40B4-BD55-48A5-9C76-AB73D79AF574}"
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "ElectricFreedom.Web.Scripts.Tests", "tests\web\ElectricFreedom.Web.Scripts.Tests\project.csproj", "{1D8E40B4-BD55-48A5-9C76-AB73D79AF574}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
