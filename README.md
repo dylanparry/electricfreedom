@@ -11,7 +11,9 @@ EF Core (Root Directory)
     |
     |-- .vscode (Directory)
     |       |
-    |       '-- settings.json
+    |       |-- settings.json
+    |       |
+    |       '-- tasks.json
     |
     |-- src (Directory)
     |       |
@@ -25,9 +27,9 @@ EF Core (Root Directory)
     |       |
     |       |-- ElectricFreedom.Core.Model (Entities)
     |       |
-    |       |-- ElectricFreedom.Core.Services (Implementation of Services)
-    |       |
     |       |-- ElectricFreedom.Core.Services.Interfares (Interfaces for BLL/External APIs/etc) *
+    |       |
+    |       |-- ElectricFreedom.Core.Services (Implementation of Services)
     |       |
     |       |-- ElectricFreedom.Web.Admin (Admin Site)
     |       |
