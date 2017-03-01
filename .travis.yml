@@ -6,6 +6,7 @@ node_js:
   - "node"
 
 env:
+  # Don't run the first time experience as it'll run every time
   - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
 
 before_install:
