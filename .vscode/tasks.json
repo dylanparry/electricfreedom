@@ -4,31 +4,31 @@
   "tasks": [
     {
       "taskName": "yarn-dev",
-      "command": "cd ./src/electricfreedom.web.scripts; yarn dev",
+      "command": "cd ./src/web/electricfreedom.web.scripts; yarn dev",
       "isShellCommand": true,
       "isBackground": true
     },
     {
       "taskName": "dotnet-run-admin",
-      "command": "cd ./src/electricfreedom.web.admin; dotnet watch run",
+      "command": "cd ./src/web/electricfreedom.web.admin; dotnet watch run",
       "isShellCommand": true,
       "isBackground": true
     },
     {
       "taskName": "dotnet-run-api",
-      "command": "cd ./src/electricfreedom.web.api; dotnet watch run",
+      "command": "cd ./src/web/electricfreedom.web.api; dotnet watch run",
       "isShellCommand": true,
       "isBackground": true
     },
     {
       "taskName": "dotnet-run-public",
-      "command": "cd ./src/electricfreedom.web.public; dotnet watch run",
+      "command": "cd ./src/web/electricfreedom.web.public; dotnet watch run",
       "isShellCommand": true,
       "isBackground": true
     },
     {
       "taskName": "dotnet-run-scripts",
-      "command": "cd ./src/electricfreedom.web.scripts; dotnet watch run",
+      "command": "cd ./src/web/electricfreedom.web.scripts; dotnet watch run",
       "isShellCommand": true,
       "isBackground": true
     }
