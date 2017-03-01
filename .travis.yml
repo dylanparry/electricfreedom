@@ -27,4 +27,4 @@ script:
   # Loop through test projects and run tests
   - for file in tests/**/project.csproj; do dotnet test $file; done
   # Restore Yarn packages and run tests
-  - cd ./src/ElectricFreedom.Web.Scripts && yarn --ignore-optional && yarn test
+  - cd ./src/web/ElectricFreedom.Web.Scripts && yarn --ignore-optional && yarn test
