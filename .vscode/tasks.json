@@ -1,12 +1,13 @@
 {
-  "version": "0.1.0",
+  "version": "2.0.0",
   "_runner": "terminal",
   "tasks": [
     {
       "taskName": "yarn-dev",
       "command": "cd ./src/web/electricfreedom.web.scripts; yarn dev",
       "isShellCommand": true,
-      "isBackground": true
+      "isBackground": true,
+      "isBuildCommand": true
     },
     {
       "taskName": "dotnet-run-admin",
@@ -31,6 +32,15 @@
       "command": "cd ./src/web/electricfreedom.web.scripts; dotnet watch run",
       "isShellCommand": true,
       "isBackground": true
+    },
+    {
+      "taskName": "run-web-servers",
+      "dependsOn": [
+        "dotnet-run-admin",
+        "dotnet-run-api",
+        "dotnet-run-public",
+        "dotnet-run-scripts"
+      ]
     }
   ]
 }
