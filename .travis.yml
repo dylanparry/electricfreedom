@@ -8,6 +8,8 @@ node_js:
 env:
   # Don't run the first time experience as it'll run every time
   - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
+  # Don't download XML documentation for Nuget packages
+  - NUGEN_XMLDOC_MODE=skip
 
 before_install:
   # Repo for dotnet
