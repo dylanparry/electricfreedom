@@ -22,9 +22,15 @@ cache:
     - $HOME/.nuget/packages # Cache for Nuget packages
 
 script:
-  # Restore dotnet projects and build
-  - dotnet restore && dotnet build
+  # Restore dotnet projects
+  - dotnet restore
+  # Build dotnet projects
+  - dotnet build
   # Loop through test projects and run tests
   - for file in tests/**/**/project.csproj; do dotnet test --no-build $file; done
-  # Restore Yarn packages and run tests
-  - cd ./src/web/ElectricFreedom.Web.Scripts && yarn --ignore-optional && yarn test
+  # Change to the scripts web project directory
+  - cd ./src/web/ElectricFreedom.Web.Scripts
+  # Restore Yarn packages
+  - yarn --ignore-optional
+  # Run Javascript tests
+  - yarn test
