@@ -4,7 +4,8 @@ import { shallow } from 'enzyme';
 
 import Link from '../../../src/components/link';
 
-describe('<Link /> component', () => {
+describe('<Link /> component', () =>
+{
   const store = {
     router: new RouterStore(),
   };
@@ -18,7 +19,8 @@ describe('<Link /> component', () => {
     }),
   };
 
-  it('Renders a basic link with correct path and text', () => {
+  it('Renders a basic link with correct path and text', () =>
+  {
     const sut = shallow(
       <Link view={routes.basic} store={store}>Test Link</Link>,
     );
@@ -26,7 +28,8 @@ describe('<Link /> component', () => {
     expect(sut.html()).toBe('<a href="/test">Test Link</a>');
   });
 
-  it('Renders a paramaterised link with correct path and text', () => {
+  it('Renders a paramaterised link with correct path and text', () =>
+  {
     const sut = shallow(
       <Link view={routes.withParams} params={{ param: 123 }} store={store}>Test Link</Link>,
     );

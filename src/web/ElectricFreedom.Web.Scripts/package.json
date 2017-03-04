@@ -45,6 +45,15 @@
     "env": {
       "browser": true,
       "jest": true
+    },
+    "rules": {
+      "brace-style": [
+        "error",
+        "allman",
+        {
+          "allowSingleLine": true
+        }
+      ]
     }
   },
   "babel": {
