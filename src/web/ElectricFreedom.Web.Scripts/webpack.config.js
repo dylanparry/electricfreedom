@@ -66,16 +66,20 @@ const config = [
 ];
 
 // Loop through the config entries, and extend each object with the shared config
-for (let i = 0; i < config.length; i += 1) {
+for (let i = 0; i < config.length; i += 1)
+{
   Object.assign(config[i], sharedConfig);
 }
 
 // Change some of the shared config if in production mode
-if (PRODUCTION) {
+if (PRODUCTION)
+{
   // Ensure we're building in production mode throughout
-  for (let i = 0; i < config.length; i += 1) {
+  for (let i = 0; i < config.length; i += 1)
+  {
     // Create an empty plugins array if there aren't any existing plugins
-    if (typeof config[i].plugins === 'undefined') {
+    if (typeof config[i].plugins === 'undefined')
+    {
       config[i].plugins = [];
     }
 
