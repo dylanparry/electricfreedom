@@ -2,12 +2,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ElectricFreedom.Web.Admin.Controllers
 {
-    public class HomeController : Controller
+  public class HomeController : Controller
+  {
+    [Route("{*catchall}")]
+    public IActionResult Index()
     {
-        [Route("{*catchall}")]
-        public IActionResult Index()
-        {
-            return View();
-        }
+      return View();
     }
+  }
 }

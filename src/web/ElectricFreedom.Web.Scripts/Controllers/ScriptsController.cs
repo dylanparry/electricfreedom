@@ -5,28 +5,28 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ElectricFreedom.Web.Scripts
 {
-    public class ScriptsController : Controller
+  public class ScriptsController : Controller
+  {
+    private IHostingEnvironment hostingEnvironment;
+
+    public ScriptsController(IHostingEnvironment hostingEnvironment)
     {
-        private IHostingEnvironment hostingEnvironment;
-
-        public ScriptsController(IHostingEnvironment hostingEnvironment)
-        {
-            this.hostingEnvironment = hostingEnvironment;
-        }
-
-        [Route("~/{scriptName}")]
-        public IActionResult GetScript(string scriptName)
-        {
-            // Get the last updated time for the map.js file
-            FileInfo fileInfo = new FileInfo(this.hostingEnvironment.WebRootPath + $"/{scriptName}.js");
-            DateTime lastUpdated = fileInfo.LastWriteTimeUtc;
-
-            if (fileInfo.Exists)
-            {
-                return Redirect($"/{scriptName}.js?" + lastUpdated.ToString("yyyyMMddHHmmss"));
-            }
-
-            return new NotFoundResult();
-        }
+      this.hostingEnvironment = hostingEnvironment;
     }
+
+    [Route("~/{scriptName}")]
+    public IActionResult GetScript(string scriptName)
+    {
+      // Get the last updated time for the map.js file
+      FileInfo fileInfo = new FileInfo(this.hostingEnvironment.WebRootPath + $"/{scriptName}.js");
+      DateTime lastUpdated = fileInfo.LastWriteTimeUtc;
+
+      if (fileInfo.Exists)
+      {
+        return Redirect($"/{scriptName}.js?" + lastUpdated.ToString("yyyyMMddHHmmss"));
+      }
+
+      return new NotFoundResult();
+    }
+  }
 }

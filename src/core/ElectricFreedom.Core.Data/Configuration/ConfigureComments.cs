@@ -3,40 +3,40 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ElectricFreedom.Core.Data.Configuration
 {
-    public static partial class Configure
+  public static partial class Configure
+  {
+    public static void ConfigureComments(ModelBuilder modelBuilder)
     {
-        public static void ConfigureComments(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Comment>(entity =>
-            {
-                // Table mapping
-                entity.ToTable("comments");
+      modelBuilder.Entity<Comment>(entity =>
+      {
+        // Table mapping
+        entity.ToTable("comments");
 
-                // Primary key
-                entity.HasKey(comment => comment.Id);
+        // Primary key
+        entity.HasKey(comment => comment.Id);
 
-                // Shadow properties
-                entity.Property<int>("articleId");
-                entity.Property<int>("parentId");
+        // Shadow properties
+        entity.Property<int>("articleId");
+        entity.Property<int>("parentId");
 
-                // Text
-                entity.Property(comment => comment.Text)
-                    .IsRequired();
+        // Text
+        entity.Property(comment => comment.Text)
+            .IsRequired();
 
-                // TODO: This should be a shadow property with a User property instead
-                // UserId
-                entity.Property(comment => comment.UserId)
-                    .IsRequired()
-                    .HasMaxLength(450);
+        // TODO: This should be a shadow property with a User property instead
+        // UserId
+        entity.Property(comment => comment.UserId)
+            .IsRequired()
+            .HasMaxLength(450);
 
-                // Created
-                entity.Property(comment => comment.Created)
-                    .IsRequired();
+        // Created
+        entity.Property(comment => comment.Created)
+            .IsRequired();
 
-                // IsFlagged
-                entity.Property(comment => comment.IsFlagged)
-                    .IsRequired();
-            });
-        }
+        // IsFlagged
+        entity.Property(comment => comment.IsFlagged)
+            .IsRequired();
+      });
     }
+  }
 }

@@ -2,11 +2,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ElectricFreedom.Web.Api.Controllers
 {
-    public class HomeController : Controller
+  public class HomeController : Controller
+  {
+    public string Index()
     {
-        public string Index()
-        {
-            return "Hello from the API project";
-        }
+      return "Hello from the API project";
     }
+  }
 }
