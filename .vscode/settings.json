@@ -6,7 +6,8 @@
     "**/npm-debug.log*": true,
     "**/yarn.lock": true,
     "**/*.csproj.user": true,
-    "**/Properties/": true
+    "**/Properties/": true,
+    ".vs": true
   },
   "editor.rulers": [
     100
