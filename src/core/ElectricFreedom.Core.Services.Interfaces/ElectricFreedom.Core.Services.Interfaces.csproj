@@ -7,6 +7,6 @@
     <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ElectricFreedom.Core.Model\project.csproj" />
+    <ProjectReference Include="..\ElectricFreedom.Core.Model\ElectricFreedom.Core.Model.csproj" />
   </ItemGroup>
 </Project>

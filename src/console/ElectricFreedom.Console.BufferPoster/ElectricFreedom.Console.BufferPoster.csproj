@@ -9,7 +9,7 @@
     <RuntimeFrameworkVersion>1.1.0</RuntimeFrameworkVersion>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\core\ElectricFreedom.Core.Services\project.csproj" />
-    <ProjectReference Include="..\..\core\ElectricFreedom.Core.Services.Interfaces\project.csproj" />
+    <ProjectReference Include="..\..\core\ElectricFreedom.Core.Services.Interfaces\ElectricFreedom.Core.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\..\core\ElectricFreedom.Core.Services\ElectricFreedom.Core.Services.csproj" />
   </ItemGroup>
 </Project>
