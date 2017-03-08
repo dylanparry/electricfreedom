@@ -1,4 +1,4 @@
-﻿namespace ElectricFreedom.Core.Services
+﻿namespace ElectricFreedom.Core.Services.Interfaces
 {
   public class Class1
   {

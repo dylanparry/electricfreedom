@@ -2,20 +2,23 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
     <DebugType>portable</DebugType>
-    <AssemblyName>ElectricFreedom.Web.Api.Tests</AssemblyName>
-    <PackageId>ElectricFreedom.Web.Api.Tests</PackageId>
+    <AssemblyName>ElectricFreedom.Web.Admin.Tests</AssemblyName>
+    <PackageId>ElectricFreedom.Web.Admin.Tests</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <PackageTargetFallback>$(PackageTargetFallback);dotnet5.4;portable-net451+win8</PackageTargetFallback>
     <RuntimeFrameworkVersion>1.1.0</RuntimeFrameworkVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\src\web\ElectricFreedom.Web.Api\project.csproj" />
-  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
     <PackageReference Include="Microsoft.DotNet.InternalAbstractions" Version="1.0.0" />
     <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
     <PackageReference Include="xunit" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\web\ElectricFreedom.Web.Admin\ElectricFreedom.Web.Admin.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
 </Project>

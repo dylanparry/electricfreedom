@@ -4,7 +4,9 @@
     "**/obj/": true,
     "**/web.config": true,
     "**/npm-debug.log*": true,
-    "**/yarn.lock": true
+    "**/yarn.lock": true,
+    "**/*.csproj.user": true,
+    "**/Properties/": true
   },
   "editor.rulers": [
     100

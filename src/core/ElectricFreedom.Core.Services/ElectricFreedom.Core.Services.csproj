@@ -7,8 +7,8 @@
     <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ElectricFreedom.Core.Data\project.csproj" />
-    <ProjectReference Include="..\ElectricFreedom.Core.Services.Interfaces\project.csproj" />
+    <ProjectReference Include="..\ElectricFreedom.Core.Data\ElectricFreedom.Core.Data.csproj" />
+    <ProjectReference Include="..\ElectricFreedom.Core.Services.Interfaces\ElectricFreedom.Core.Services.Interfaces.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ImageSharp" Version="1.0.0-alpha2-00117" />
