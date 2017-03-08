@@ -27,7 +27,7 @@ script:
   # Build dotnet projects
   - dotnet build
   # Loop through test projects and run tests
-  - for file in tests/**/**/project.csproj; do dotnet test --no-build $file; done
+  - for file in tests/**/**/*.csproj; do dotnet test --no-build $file; done
   # Change to the scripts web project directory
   - cd ./src/web/ElectricFreedom.Web.Scripts
   # Restore Yarn packages
