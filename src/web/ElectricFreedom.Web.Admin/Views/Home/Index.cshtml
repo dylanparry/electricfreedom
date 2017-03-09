@@ -1,4 +1,10 @@
 <div id="app"></div>
 
-<script src="http://localhost:5003/admin-libs"></script>
-<script src="http://localhost:5003/admin"></script>
+<environment names="Development">
+  <script src="http://localhost:5003/admin-libs"></script>
+  <script src="http://localhost:5003/admin"></script>
+</environment>
+<environment names="Production">
+  <script src="https://scripts.electricfreedom.com/admin-libs"></script>
+  <scripts src="https://scripts.electricfreedom.com/admin"></scripts>
+</environment>
