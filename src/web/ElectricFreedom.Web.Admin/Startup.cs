@@ -12,16 +12,8 @@ namespace ElectricFreedom.Web.Admin
     {
       var builder = new ConfigurationBuilder()
         .SetBasePath(env.ContentRootPath)
-        .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-        .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+        .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 
-      if (env.IsDevelopment())
-      {
-        // For more details on using the user secret store see https://go.microsoft.com/fwlink/?LinkID=532709
-        builder.AddUserSecrets<Startup>();
-      }
-
-      builder.AddEnvironmentVariables();
       Configuration = builder.Build();
     }
 
@@ -47,8 +39,6 @@ namespace ElectricFreedom.Web.Admin
       {
         app.UseExceptionHandler("/Home/Error");
       }
-
-      app.UseStaticFiles();
 
       // Add external authentication middleware below. To configure them please see https://go.microsoft.com/fwlink/?LinkID=532715
 
