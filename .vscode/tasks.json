@@ -11,25 +11,25 @@
     },
     {
       "taskName": "dotnet-run-admin",
-      "command": "cd ./src/web/electricfreedom.web.admin; dotnet watch run",
+      "command": "$Env:ASPNETCORE_ENVIRONMENT='Development'; cd ./src/web/electricfreedom.web.admin; dotnet watch run",
       "isShellCommand": true,
       "isBackground": true
     },
     {
       "taskName": "dotnet-run-api",
-      "command": "cd ./src/web/electricfreedom.web.api; dotnet watch run",
+      "command": "$Env:ASPNETCORE_ENVIRONMENT='Development'; cd ./src/web/electricfreedom.web.api; dotnet watch run",
       "isShellCommand": true,
       "isBackground": true
     },
     {
       "taskName": "dotnet-run-public",
-      "command": "cd ./src/web/electricfreedom.web.public; dotnet watch run",
+      "command": "$Env:ASPNETCORE_ENVIRONMENT='Development'; cd ./src/web/electricfreedom.web.public; dotnet watch run",
       "isShellCommand": true,
       "isBackground": true
     },
     {
       "taskName": "dotnet-run-scripts",
-      "command": "cd ./src/web/electricfreedom.web.scripts; dotnet watch run",
+      "command": "$Env:ASPNETCORE_ENVIRONMENT='Development'; cd ./src/web/electricfreedom.web.scripts; dotnet watch run",
       "isShellCommand": true,
       "isBackground": true
     },
