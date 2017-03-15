@@ -42,7 +42,7 @@ const config = [
   {
     // Admin
     entry: {
-      admin: './scripts/admin/src/bootstrap.jsx',
+      admin: './scripts/admin/bootstrap.jsx',
       'admin-libs': [
         'axios',
         'mobx',
