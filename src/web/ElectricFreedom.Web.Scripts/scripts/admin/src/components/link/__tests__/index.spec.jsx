@@ -2,7 +2,7 @@ import React from 'react';
 import { RouterStore, Route } from 'mobx-router';
 import { shallow } from 'enzyme';
 
-import Link from '../../../src/components/link';
+import Link from '../';
 
 describe('<Link /> component', () =>
 {

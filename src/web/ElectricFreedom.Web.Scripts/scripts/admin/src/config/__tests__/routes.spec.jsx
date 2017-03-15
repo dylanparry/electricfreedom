@@ -1,6 +1,6 @@
 import { RouterStore } from 'mobx-router';
 
-import routes from '../../src/config/routes';
+import routes from '../routes';
 
 describe('routes', () =>
 {
