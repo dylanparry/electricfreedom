@@ -1,4 +1,4 @@
-using ElectricFreedom.Core.Model;
+using ElectricFreedom.Core.Entities;
 
 using Microsoft.EntityFrameworkCore;
 

@@ -1,15 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
-    <DebugType>portable</DebugType>
-    <AssemblyName>ElectricFreedom.Console.BufferPoster</AssemblyName>
     <OutputType>Exe</OutputType>
-    <PackageId>ElectricFreedom.Console.BufferPoster</PackageId>
-    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
-    <RuntimeFrameworkVersion>1.1.1</RuntimeFrameworkVersion>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\core\ElectricFreedom.Core.Services.Interfaces\ElectricFreedom.Core.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\..\core\ElectricFreedom.Core.Entities\ElectricFreedom.Core.Entities.csproj" />
     <ProjectReference Include="..\..\core\ElectricFreedom.Core.Services\ElectricFreedom.Core.Services.csproj" />
+    <ProjectReference Include="..\..\core\ElectricFreedom.Core.Services.Interfaces\ElectricFreedom.Core.Services.Interfaces.csproj" />
   </ItemGroup>
 </Project>

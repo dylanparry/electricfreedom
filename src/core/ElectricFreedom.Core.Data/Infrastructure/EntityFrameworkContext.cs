@@ -1,5 +1,5 @@
 using ElectricFreedom.Core.Data.Configuration;
-using ElectricFreedom.Core.Model;
+using ElectricFreedom.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace ElectricFreedom.Core.Data.Isfrastructure

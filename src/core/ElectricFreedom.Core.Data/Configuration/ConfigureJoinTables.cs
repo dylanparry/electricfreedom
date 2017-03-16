@@ -1,4 +1,4 @@
-using ElectricFreedom.Core.Model.JoinTables;
+using ElectricFreedom.Core.Entities.JoinTables;
 using Microsoft.EntityFrameworkCore;
 
 namespace ElectricFreedom.Core.Data.Configuration

@@ -2,34 +2,36 @@
   "version": "2.0.0",
   "_runner": "terminal",
   "tasks": [
+    // Build task for Yarn
     {
       "taskName": "yarn-dev",
-      "command": "cd ./src/web/electricfreedom.web.scripts; yarn dev",
+      "command": "cd ./src/web/ElectricFreedom.Web.Scripts; yarn dev",
       "isShellCommand": true,
       "isBackground": true,
       "isBuildCommand": true
     },
+    // Run tasks for running websites
     {
       "taskName": "dotnet-run-admin",
-      "command": "$Env:ASPNETCORE_ENVIRONMENT='Development'; cd ./src/web/electricfreedom.web.admin; dotnet watch run",
+      "command": "$Env:ASPNETCORE_ENVIRONMENT='Development'; cd ./src/web/ElectricFreedom.Web.Admin; dotnet watch run",
       "isShellCommand": true,
       "isBackground": true
     },
     {
       "taskName": "dotnet-run-api",
-      "command": "$Env:ASPNETCORE_ENVIRONMENT='Development'; cd ./src/web/electricfreedom.web.api; dotnet watch run",
+      "command": "$Env:ASPNETCORE_ENVIRONMENT='Development'; cd ./src/web/ElectricFreedom.Web.Api; dotnet watch run",
       "isShellCommand": true,
       "isBackground": true
     },
     {
       "taskName": "dotnet-run-public",
-      "command": "$Env:ASPNETCORE_ENVIRONMENT='Development'; cd ./src/web/electricfreedom.web.public; dotnet watch run",
+      "command": "$Env:ASPNETCORE_ENVIRONMENT='Development'; cd ./src/web/ElectricFreedom.Web.Public; dotnet watch run",
       "isShellCommand": true,
       "isBackground": true
     },
     {
       "taskName": "dotnet-run-scripts",
-      "command": "$Env:ASPNETCORE_ENVIRONMENT='Development'; cd ./src/web/electricfreedom.web.scripts; dotnet watch run",
+      "command": "$Env:ASPNETCORE_ENVIRONMENT='Development'; cd ./src/web/ElectricFreedom.Web.Scripts; dotnet watch run",
       "isShellCommand": true,
       "isBackground": true
     },
@@ -41,6 +43,37 @@
         "dotnet-run-public",
         "dotnet-run-scripts"
       ]
+    },
+    // Build tasks for dotnet debugger
+    {
+      "taskName": "dotnet-build-bufferposter",
+      "command": "cd ./src/console/electricfreedom.console.bufferposter; dotnet build",
+      "problemMatcher": "$msCompile",
+      "isShellCommand": true
+    },
+    {
+      "taskName": "dotnet-build-admin",
+      "command": "cd ./src/web/ElectricFreedom.Web.Admin; dotnet build",
+      "problemMatcher": "$msCompile",
+      "isShellCommand": true
+    },
+    {
+      "taskName": "dotnet-build-api",
+      "command": "cd ./src/web/ElectricFreedom.Web.Api; dotnet build",
+      "problemMatcher": "$msCompile",
+      "isShellCommand": true
+    },
+    {
+      "taskName": "dotnet-build-public",
+      "command": "cd ./src/web/ElectricFreedom.Web.Public; dotnet build",
+      "problemMatcher": "$msCompile",
+      "isShellCommand": true
+    },
+    {
+      "taskName": "dotnet-build-scripts",
+      "command": "cd ./src/web/ElectricFreedom.Web.Scripts; dotnet build",
+      "problemMatcher": "$msCompile",
+      "isShellCommand": true
     }
   ]
 }

@@ -1,0 +1,65 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "ElectricFreedom.Console.BufferPoster",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "dotnet-build-bufferposter",
+      "program": "${workspaceRoot}/src/console/ElectricFreedom.Console.BufferPoster/bin/Debug/netcoreapp1.1/ElectricFreedom.Console.BufferPoster.dll",
+      "args": [],
+      "cwd": "${workspaceRoot}/src/console/ElectricFreedom.Console.BufferPoster",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      "name": "ElectricFreedom.Web.Admin",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "dotnet-build-admin",
+      "program": "${workspaceRoot}/src/web/ElectricFreedom.Web.Admin/bin/Debug/netcoreapp1.1/ElectricFreedom.Web.Admin.dll",
+      "args": [],
+      "cwd": "${workspaceRoot}/src/web/ElectricFreedom.Web.Admin",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      "name": "ElectricFreedom.Web.API",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "dotnet-build-api",
+      "program": "${workspaceRoot}/src/web/ElectricFreedom.Web.Api/bin/Debug/netcoreapp1.1/ElectricFreedom.Web.Api.dll",
+      "args": [],
+      "cwd": "${workspaceRoot}/src/web/ElectricFreedom.Web.Api",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      "name": "ElectricFreedom.Web.Public",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "dotnet-build-public",
+      "program": "${workspaceRoot}/src/web/ElectricFreedom.Web.Public/bin/Debug/netcoreapp1.1/ElectricFreedom.Web.Public.dll",
+      "args": [],
+      "cwd": "${workspaceRoot}/src/web/ElectricFreedom.Web.Public",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      "name": "ElectricFreedom.Web.Scripts",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "dotnet-build-scripts",
+      "program": "${workspaceRoot}/src/web/ElectricFreedom.Web.Scripts/bin/Debug/netcoreapp1.1/ElectricFreedom.Web.Scripts.dll",
+      "args": [],
+      "cwd": "${workspaceRoot}/src/web/ElectricFreedom.Web.Scripts",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}
