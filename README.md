@@ -29,7 +29,7 @@ EF Core (Root Directory)
     |       |       |       |
     |       |       |       '-- Infrastructure (DBContext, etc)
     |       |       |
-    |       |       |-- ElectricFreedom.Core.Model (Entities)
+    |       |       |-- ElectricFreedom.Core.Entities (Model)
     |       |       |
     |       |       |-- ElectricFreedom.Core.Services.Interfares (Interfaces for BLL/External APIs/etc) *
     |       |       |
@@ -53,7 +53,7 @@ EF Core (Root Directory)
             |
             |-- core (Directory)
             |       |
-            |       |-- ElectricFreedom.Core.Model.Tests
+            |       |-- ElectricFreedom.Core.Entities.Tests
             |       |
             |       '-- ElectricFreedom.Core.Services.Tests
             |

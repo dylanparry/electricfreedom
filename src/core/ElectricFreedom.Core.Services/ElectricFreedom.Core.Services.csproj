@@ -1,13 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard1.6</TargetFramework>
-    <DebugType>portable</DebugType>
-    <AssemblyName>ElectricFreedom.Core.Services</AssemblyName>
-    <PackageId>ElectricFreedom.Core.Services</PackageId>
-    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\ElectricFreedom.Core.Data\ElectricFreedom.Core.Data.csproj" />
+    <ProjectReference Include="..\ElectricFreedom.Core.Entities\ElectricFreedom.Core.Entities.csproj" />
     <ProjectReference Include="..\ElectricFreedom.Core.Services.Interfaces\ElectricFreedom.Core.Services.Interfaces.csproj" />
   </ItemGroup>
   <ItemGroup>

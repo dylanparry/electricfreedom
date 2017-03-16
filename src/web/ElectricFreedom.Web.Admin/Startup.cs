@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,9 +11,10 @@ namespace ElectricFreedom.Web.Admin
     public Startup(IHostingEnvironment env)
     {
       var builder = new ConfigurationBuilder()
-        .SetBasePath(env.ContentRootPath)
-        .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-
+          .SetBasePath(env.ContentRootPath)
+          .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+          .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+          .AddEnvironmentVariables();
       Configuration = builder.Build();
     }
 
@@ -22,6 +23,7 @@ namespace ElectricFreedom.Web.Admin
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
+      // Add framework services.
       services.AddMvc();
     }
 
@@ -34,20 +36,16 @@ namespace ElectricFreedom.Web.Admin
       if (env.IsDevelopment())
       {
         app.UseDeveloperExceptionPage();
+        app.UseBrowserLink();
       }
       else
       {
         app.UseExceptionHandler("/Home/Error");
       }
 
-      // Add external authentication middleware below. To configure them please see https://go.microsoft.com/fwlink/?LinkID=532715
+      app.UseStaticFiles();
 
-      app.UseMvc(routes =>
-      {
-        routes.MapRoute(
-          name: "default",
-          template: "{controller=Home}/{action=Index}/{id?}");
-      });
+      app.UseMvc();
     }
   }
 }
