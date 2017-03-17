@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link Component render 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <link
+    params={Object {}}
+    store={
+        Object {
+            "router": RouterStore {
+              "goTo": [Function],
+            },
+          }
+    }
+    view={
+        Route {
+            "component": null,
+            "getParamsObject": [Function],
+            "getRootPath": [Function],
+            "goTo": [Function],
+            "originalPath": "/test",
+            "path": "/test",
+            "replaceUrlParams": [Function],
+            "rootPath": "/test",
+          }
+    }
+>
+    Test Link
+</link>,
+  "nodes": Array [
+    <link
+      params={Object {}}
+      store={
+            Object {
+                  "router": RouterStore {
+                    "goTo": [Function],
+                  },
+                }
+      }
+      view={
+            Route {
+                  "component": null,
+                  "getParamsObject": [Function],
+                  "getRootPath": [Function],
+                  "goTo": [Function],
+                  "originalPath": "/test",
+                  "path": "/test",
+                  "replaceUrlParams": [Function],
+                  "rootPath": "/test",
+                }
+      }
+>
+      Test Link
+</link>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <inject-link-with-store
+        params={Object {}}
+        store={
+                Object {
+                        "router": RouterStore {
+                          "goTo": [Function],
+                        },
+                      }
+        }
+        view={
+                Route {
+                        "component": null,
+                        "getParamsObject": [Function],
+                        "getRootPath": [Function],
+                        "goTo": [Function],
+                        "originalPath": "/test",
+                        "path": "/test",
+                        "replaceUrlParams": [Function],
+                        "rootPath": "/test",
+                      }
+        }
+>
+        Test Link
+</inject-link-with-store>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance":  {
+        "_reactInternalInstance": [Circular],
+        "context": Object {
+          "mobxStores": undefined,
+        },
+        "props": Object {
+          "children": "Test Link",
+          "params": Object {},
+          "store": Object {
+            "router": RouterStore {
+              "goTo": [Function],
+            },
+          },
+          "view": Route {
+            "component": null,
+            "getParamsObject": [Function],
+            "getRootPath": [Function],
+            "goTo": [Function],
+            "originalPath": "/test",
+            "path": "/test",
+            "replaceUrlParams": [Function],
+            "rootPath": "/test",
+          },
+        },
+        "refs": Object {},
+        "state": null,
+        "storeRef": [Function],
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <link
+          params={Object {}}
+          store={
+                    Object {
+                              "router": RouterStore {
+                                "goTo": [Function],
+                              },
+                            }
+          }
+          view={
+                    Route {
+                              "component": null,
+                              "getParamsObject": [Function],
+                              "getRootPath": [Function],
+                              "goTo": [Function],
+                              "originalPath": "/test",
+                              "path": "/test",
+                              "replaceUrlParams": [Function],
+                              "rootPath": "/test",
+                            }
+          }
+>
+          Test Link
+</link>,
+        "_debugID": 2,
+        "_renderedOutput": <link
+          params={Object {}}
+          store={
+                    Object {
+                              "router": RouterStore {
+                                "goTo": [Function],
+                              },
+                            }
+          }
+          view={
+                    Route {
+                              "component": null,
+                              "getParamsObject": [Function],
+                              "getRootPath": [Function],
+                              "goTo": [Function],
+                              "originalPath": "/test",
+                              "path": "/test",
+                              "replaceUrlParams": [Function],
+                              "rootPath": "/test",
+                            }
+          }
+>
+          Test Link
+</link>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <inject-link-with-store
+    params={Object {}}
+    store={
+        Object {
+            "router": RouterStore {
+              "goTo": [Function],
+            },
+          }
+    }
+    view={
+        Route {
+            "component": null,
+            "getParamsObject": [Function],
+            "getRootPath": [Function],
+            "goTo": [Function],
+            "originalPath": "/test",
+            "path": "/test",
+            "replaceUrlParams": [Function],
+            "rootPath": "/test",
+          }
+    }
+>
+    Test Link
+</inject-link-with-store>,
+}
+`;

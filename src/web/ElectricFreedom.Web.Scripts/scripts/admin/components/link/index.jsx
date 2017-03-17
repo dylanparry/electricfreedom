@@ -13,7 +13,7 @@ const defaultProps = {
   params: {},
 };
 
-const link = ({ store, view, params, children }) => (
+export const link = ({ store, view, params, children }) => (
   <Link view={view} params={params} store={store}>{children}</Link>
 );
 

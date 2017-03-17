@@ -4,36 +4,71 @@ import { shallow } from 'enzyme';
 
 import Link from '../';
 
-describe('<Link /> component', () =>
+const routes = {
+  basic: new Route({
+    path: '/test',
+    component: null,
+  }),
+  withParams: new Route({
+    path: '/test/:param',
+    component: null,
+  }),
+};
+
+const setup = (propOverrides) =>
 {
-  const store = {
-    router: new RouterStore(),
-  };
-  const routes = {
-    basic: new Route({
-      path: '/test',
-      component: null,
-    }),
-    withParams: new Route({
-      path: '/test/:param',
-    }),
-  };
+  const props = Object.assign({
+    children: 'Test Link',
+    view: routes.basic,
+    params: {},
+    store: {
+      router: new RouterStore(),
+    },
+  }, propOverrides);
 
-  it('Renders a basic link with correct path and text', () =>
+  const wrapper = shallow(<Link {...props}>{props.children}</Link>);
+
+  return {
+    wrapper,
+    text: wrapper.dive().dive().text(), // The link text
+    href: wrapper.dive().dive().prop('href'), // The link href
+  };
+};
+
+describe('Link Component', () =>
+{
+  test('render', () =>
   {
-    const sut = shallow(
-      <Link view={routes.basic} store={store}>Test Link</Link>,
-    );
+    const { wrapper } = setup();
 
-    expect(sut.html()).toBe('<a href="/test">Test Link</a>');
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it('Renders a paramaterised link with correct path and text', () =>
+  test('with children', () =>
   {
-    const sut = shallow(
-      <Link view={routes.withParams} params={{ param: 123 }} store={store}>Test Link</Link>,
-    );
+    const { text } = setup({
+      children: 'Other Text',
+    });
 
-    expect(sut.html()).toBe('<a href="/test/123">Test Link</a>');
+    expect(text).toBe('Other Text');
+  });
+
+  test('with a "view" attribute', () =>
+  {
+    const { href } = setup({
+      view: routes.basic,
+    });
+
+    expect(href).toBe('/test');
+  });
+
+  test('with a "params" attribute', () =>
+  {
+    const { href } = setup({
+      view: routes.withParams,
+      params: { param: 123 },
+    });
+
+    expect(href).toBe('/test/123');
   });
 });

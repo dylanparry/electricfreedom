@@ -2,31 +2,25 @@ import { RouterStore } from 'mobx-router';
 
 import routes from '../routes';
 
+const router = new RouterStore();
+
 describe('routes', () =>
 {
-  let router;
-
-  beforeEach(() =>
-  {
-    router = new RouterStore();
-    router.currentView = routes.home;
-  });
-
-  it('Matches the "home" route', () =>
+  test('the "home" route', () =>
   {
     router.goTo(routes.home);
 
     expect(router.currentPath).toBe('/');
   });
 
-  it('Matches the "artistIndex" route', () =>
+  test('the "artistIndex" route', () =>
   {
     router.goTo(routes.artistIndex);
 
     expect(router.currentPath).toBe('/artists');
   });
 
-  it('Matches the "artistEdit" route', () =>
+  test('the "artistEdit" route', () =>
   {
     const params = {
       artistId: 123,
@@ -37,14 +31,14 @@ describe('routes', () =>
     expect(router.currentPath).toBe('/artists/123');
   });
 
-  it('Matches the "artistAdd" route', () =>
+  test('the "artistAdd" route', () =>
   {
     router.goTo(routes.artistAdd);
 
     expect(router.currentPath).toBe('/artists/add');
   });
 
-  it('Matches the "albumIndex" route', () =>
+  test('the "albumIndex" route', () =>
   {
     const params = {
       artistId: 123,
@@ -55,7 +49,7 @@ describe('routes', () =>
     expect(router.currentPath).toBe('/artists/123/albums');
   });
 
-  it('Matches the "albumEdit" route', () =>
+  test('the "albumEdit" route', () =>
   {
     const params = {
       artistId: 123,
@@ -67,7 +61,7 @@ describe('routes', () =>
     expect(router.currentPath).toBe('/artists/123/albums/456');
   });
 
-  it('Matches the "albumAdd" route', () =>
+  test('the "albumAdd" route', () =>
   {
     const params = {
       artistId: 123,
@@ -78,14 +72,14 @@ describe('routes', () =>
     expect(router.currentPath).toBe('/artists/123/albums/add');
   });
 
-  it('Matches the "articleIndex" route', () =>
+  test('the "articleIndex" route', () =>
   {
     router.goTo(routes.articleIndex);
 
     expect(router.currentPath).toBe('/articles');
   });
 
-  it('Matches the "articleEdit" route', () =>
+  test('the "articleEdit" route', () =>
   {
     const params = {
       articleId: 123,
@@ -96,21 +90,21 @@ describe('routes', () =>
     expect(router.currentPath).toBe('/articles/123');
   });
 
-  it('Matches the "articleAdd" route', () =>
+  test('the "articleAdd" route', () =>
   {
     router.goTo(routes.articleAdd);
 
     expect(router.currentPath).toBe('/articles/add');
   });
 
-  it('Matches the "tagIndex" route', () =>
+  test('the "tagIndex" route', () =>
   {
     router.goTo(routes.tagIndex);
 
     expect(router.currentPath).toBe('/tags');
   });
 
-  it('Matches the "tagEdit" route', () =>
+  test('the "tagEdit" route', () =>
   {
     const params = {
       tagId: 123,
@@ -121,28 +115,28 @@ describe('routes', () =>
     expect(router.currentPath).toBe('/tags/123');
   });
 
-  it('Matches the "tagAdd" route', () =>
+  test('the "tagAdd" route', () =>
   {
     router.goTo(routes.tagAdd);
 
     expect(router.currentPath).toBe('/tags/add');
   });
 
-  it('Matches the "reviewIndex" route', () =>
+  test('the "reviewIndex" route', () =>
   {
     router.goTo(routes.reviewIndex);
 
     expect(router.currentPath).toBe('/reviews');
   });
 
-  it('Matches the "commentIndex" route', () =>
+  test('the "commentIndex" route', () =>
   {
     router.goTo(routes.commentIndex);
 
     expect(router.currentPath).toBe('/comments');
   });
 
-  it('Matches the "userIndex" route', () =>
+  test('the "userIndex" route', () =>
   {
     router.goTo(routes.userIndex);
 
