@@ -36,11 +36,19 @@ namespace ElectricFreedom.Web.Scripts.Tests
       }
 
       [Fact]
-      public void Returns_A_RedirectResult()
+      public void Returns_A_RedirectResult_For_File_That_Exists()
       {
         var result = this.controller.GetScript("test");
 
         Assert.True(result is RedirectResult);
+      }
+
+      [Fact]
+      public void Returns_A_NotFoundResult_For_File_That_Does_Not_Exist()
+      {
+        var result = this.controller.GetScript("invalid_file_name");
+
+        Assert.True(result is NotFoundResult);
       }
 
       [Fact]
