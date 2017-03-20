@@ -17,12 +17,13 @@ namespace ElectricFreedom.Web.Scripts
     [Route("~/{scriptName}")]
     public IActionResult GetScript(string scriptName)
     {
-      // Get the last updated time for the map.js file
       FileInfo fileInfo = new FileInfo(this.hostingEnvironment.WebRootPath + $"/{scriptName}.js");
-      DateTime lastUpdated = fileInfo.LastWriteTimeUtc;
 
       if (fileInfo.Exists)
       {
+        // Get the last updated time for the .js file
+        DateTime lastUpdated = fileInfo.LastWriteTimeUtc;
+
         return Redirect($"/{scriptName}.js?" + lastUpdated.ToString("yyyyMMddHHmmss"));
       }
 
