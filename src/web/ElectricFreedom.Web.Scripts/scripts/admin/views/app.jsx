@@ -1,6 +1,15 @@
 import React from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
 
+import HomeIndex from './home';
+import ArtistSwitch from './artist/switch';
+import AlbumSwitch from './album/switch';
+import ArticleSwitch from './article/switch';
+import TagSwitch from './tag/switch';
+import ReviewIndex from './review';
+import CommentIndex from './comment';
+import UserIndex from './user';
+
 const app = () => (
   <div>
     <p>My App</p>
@@ -41,22 +50,14 @@ const app = () => (
     </ul>
 
     <Switch>
-      <Route path="/users" component={() => <p>Users</p>} />
-      <Route path="/comments" component={() => <p>Comments</p>} />
-      <Route path="/reviews" component={() => <p>Reviews</p>} />
-      <Route path="/tags/add" component={() => <p>Add Tag</p>} />
-      <Route path="/tags/:articleId" component={() => <p>Edit Tag</p>} />
-      <Route path="/tags" component={() => <p>Tags</p>} />
-      <Route path="/articles/add" component={() => <p>Add Article</p>} />
-      <Route path="/articles/:articleId" component={() => <p>Edit Article</p>} />
-      <Route path="/articles" component={() => <p>Articles</p>} />
-      <Route path="/artists/:artistId/albums/add" component={() => <p>Add Album</p>} />
-      <Route path="/artists/:artistId/albums/:albumId" component={() => <p>Edit Album</p>} />
-      <Route path="/artists/:artistId/albums" component={() => <p>Albums</p>} />
-      <Route path="/artists/add" component={() => <p>Add Artist</p>} />
-      <Route path="/artists/:artistId" component={() => <p>Edit Artist</p>} />
-      <Route path="/artists" component={() => <p>Artists</p>} />
-      <Route path="/" component={() => <p>Home</p>} />
+      <Route path="/users" component={UserIndex} />
+      <Route path="/comments" component={CommentIndex} />
+      <Route path="/reviews" component={ReviewIndex} />
+      <Route path="/tags" component={TagSwitch} />
+      <Route path="/articles" component={ArticleSwitch} />
+      <Route path="/artists/:artistId/albums" component={AlbumSwitch} />
+      <Route path="/artists" component={ArtistSwitch} />
+      <Route path="/" component={HomeIndex} />
     </Switch>
   </div>
 );
