@@ -3,6 +3,7 @@ environment = environment.trim();
 const PRODUCTION = environment === 'production';
 
 const webpack = require('webpack');
+const path = require('path');
 
 // Shared config
 const sharedConfig = {
@@ -54,7 +55,7 @@ const config = [
       ],
     },
     output: {
-      path: 'wwwroot',
+      path: path.resolve(__dirname, 'wwwroot'),
       filename: '[name].js',
     },
     plugins: [
