@@ -10,7 +10,7 @@ import ReviewSwitch from '../review';
 import CommentSwitch from '../comment';
 import UserSwitch from '../user';
 
-const app = () => (
+const layout = () => (
   <div>
     <p>My App</p>
 
@@ -62,4 +62,4 @@ const app = () => (
   </div>
 );
 
-export default app;
+export default layout;
