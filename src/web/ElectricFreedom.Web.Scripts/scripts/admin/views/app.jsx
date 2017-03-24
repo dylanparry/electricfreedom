@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
 
-import HomeIndex from './home';
-import ArtistSwitch from './artist/switch';
-import AlbumSwitch from './album/switch';
-import ArticleSwitch from './article/switch';
-import TagSwitch from './tag/switch';
-import ReviewIndex from './review';
-import CommentIndex from './comment';
-import UserIndex from './user';
+import HomeSwitch from './home';
+import ArtistSwitch from './artist';
+import AlbumSwitch from './album';
+import ArticleSwitch from './article';
+import TagSwitch from './tag';
+import ReviewSwitch from './review';
+import CommentSwitch from './comment';
+import UserSwitch from './user';
 
 const app = () => (
   <div>
@@ -50,14 +50,14 @@ const app = () => (
     </ul>
 
     <Switch>
-      <Route path="/users" component={UserIndex} />
-      <Route path="/comments" component={CommentIndex} />
-      <Route path="/reviews" component={ReviewIndex} />
+      <Route path="/users" component={UserSwitch} />
+      <Route path="/comments" component={CommentSwitch} />
+      <Route path="/reviews" component={ReviewSwitch} />
       <Route path="/tags" component={TagSwitch} />
       <Route path="/articles" component={ArticleSwitch} />
       <Route path="/artists/:artistId/albums" component={AlbumSwitch} />
       <Route path="/artists" component={ArtistSwitch} />
-      <Route path="/" component={HomeIndex} />
+      <Route path="/" component={HomeSwitch} />
     </Switch>
   </div>
 );

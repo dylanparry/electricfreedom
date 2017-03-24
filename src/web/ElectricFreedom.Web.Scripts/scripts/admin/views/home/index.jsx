@@ -1,7 +1,12 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-const homeIndex = () => (
-  <p>Home</p>
+import Stats from './stats';
+
+const homeSwitch = () => (
+  <Switch>
+    <Route path="/" component={Stats} />
+  </Switch>
 );
 
-export default homeIndex;
+export default homeSwitch;
