@@ -4,8 +4,13 @@ module.exports = function wallabyConfig(wallaby)
     files: [
       'scripts/**/*.js',
       'scripts/**/*.jsx',
+      'scripts/**/*.snap',
       '!scripts/**/__tests__/*.js',
       '!scripts/**/__tests__/*.jsx',
+    ],
+
+    filesWithNoCoverageCalculated: [
+      'scripts/**/bootstrap.jsx',
     ],
 
     tests: [
