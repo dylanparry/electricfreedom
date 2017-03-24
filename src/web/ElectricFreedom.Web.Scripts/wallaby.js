@@ -9,6 +9,10 @@ module.exports = function wallabyConfig(wallaby)
       '!scripts/**/__tests__/*.jsx',
     ],
 
+    filesWithNoCoverageCalculated: [
+      'scripts/**/bootstrap.jsx',
+    ],
+
     tests: [
       'scripts/**/__tests__/*.js',
       'scripts/**/__tests__/*.jsx',
