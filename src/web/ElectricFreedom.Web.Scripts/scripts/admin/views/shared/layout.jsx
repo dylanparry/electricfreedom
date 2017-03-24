@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
 
-import HomeSwitch from './home';
-import ArtistSwitch from './artist';
-import AlbumSwitch from './album';
-import ArticleSwitch from './article';
-import TagSwitch from './tag';
-import ReviewSwitch from './review';
-import CommentSwitch from './comment';
-import UserSwitch from './user';
+import HomeSwitch from '../home';
+import ArtistSwitch from '../artist';
+import AlbumSwitch from '../album';
+import ArticleSwitch from '../article';
+import TagSwitch from '../tag';
+import ReviewSwitch from '../review';
+import CommentSwitch from '../comment';
+import UserSwitch from '../user';
 
 const app = () => (
   <div>
