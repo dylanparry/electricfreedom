@@ -18,6 +18,6 @@ describe('AlbumAdd', () =>
   {
     const { wrapper } = setup();
 
-    expect(wrapper.exists()).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 });
