@@ -14,7 +14,11 @@ const setup = (propOverrides) =>
   const props = Object.assign({
     initialEntries: ['/'],
   }, propOverrides);
-  const mounted = mount(<MemoryRouter {...props}><AlbumSwitch /></MemoryRouter>);
+  const mounted = mount((
+    <MemoryRouter {...props}>
+      <AlbumSwitch />
+    </MemoryRouter>
+  ));
 
   return {
     wrapper,
@@ -33,40 +37,47 @@ describe('AlbumSwitch', () =>
 
   test('route "/artists/:artistId/albums/add" renders AlbumAdd', () =>
   {
-    for (let i = 1; i <= 10; i += 1)
+    for (let i = 1; i <= 5; i += 1)
     {
       const { mounted } = setup({
         initialEntries: [`/artists/${i}/albums/add`],
       });
 
-      expect(mounted.find(AlbumAdd).exists()).toBe(true);
+      const albumAdd = mounted.find(AlbumAdd);
+      expect(albumAdd.exists()).toBe(true);
+      expect(albumAdd.props().match.params.artistId).toBe(i.toString());
     }
   });
 
   test('route "/artists/:artistId/albums/:albumId" renders AlbumEdit', () =>
   {
-    for (let i = 1; i <= 10; i += 1)
+    for (let i = 1; i <= 5; i += 1)
     {
-      for (let j = 1; j <= 10; j += 1)
+      for (let j = 1; j <= 5; j += 1)
       {
         const { mounted } = setup({
           initialEntries: [`/artists/${i}/albums/${j}`],
         });
 
-        expect(mounted.find(AlbumEdit).exists()).toBe(true);
+        const albumEdit = mounted.find(AlbumEdit);
+        expect(albumEdit.exists()).toBe(true);
+        expect(albumEdit.props().match.params.artistId).toBe(i.toString());
+        expect(albumEdit.props().match.params.albumId).toBe(j.toString());
       }
     }
   });
 
   test('route "/artists/:artistId/albums" renders AlbumList', () =>
   {
-    for (let i = 1; i <= 10; i += 1)
+    for (let i = 1; i <= 5; i += 1)
     {
       const { mounted } = setup({
         initialEntries: [`/artists/${i}/albums`],
       });
 
-      expect(mounted.find(AlbumList).exists()).toBe(true);
+      const albumList = mounted.find(AlbumList);
+      expect(albumList.exists()).toBe(true);
+      expect(albumList.props().match.params.artistId).toBe(i.toString());
     }
   });
 });
