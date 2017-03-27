@@ -1,14 +1,33 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import { MemoryRouter } from 'react-router-dom';
 
 import Layout from '../layout';
+import HomeSwitch from '../../home';
+import ArtistSwitch from '../../artist';
+import AlbumSwitch from '../../album';
+import ArticleSwitch from '../../article';
+import TagSwitch from '../../tag';
+import ReviewSwitch from '../../review';
+import CommentSwitch from '../../comment';
+import UserSwitch from '../../user';
 
-const setup = () =>
+const setup = (propOverrides) =>
 {
   const wrapper = shallow(<Layout />);
 
+  const props = Object.assign({
+    initialEntries: ['/'],
+  }, propOverrides);
+  const mounted = mount((
+    <MemoryRouter {...props}>
+      <Layout />
+    </MemoryRouter>
+  ));
+
   return {
     wrapper,
+    mounted,
   };
 };
 
@@ -19,5 +38,141 @@ describe('Layout', () =>
     const { wrapper } = setup();
 
     expect(wrapper).toMatchSnapshot();
+  });
+
+  test('routes beginning "/users" render UserSwitch', () =>
+  {
+    const routes = [
+      '/users',
+    ];
+
+    for (let i = 0; i < routes.length; i += 1)
+    {
+      const { mounted } = setup({
+        initialEntries: [routes[i]],
+      });
+
+      expect(mounted.find(UserSwitch).exists()).toBe(true);
+    }
+  });
+
+  test('routes beginning "/comments" render CommentSwitch', () =>
+  {
+    const routes = [
+      '/comments',
+    ];
+
+    for (let i = 0; i < routes.length; i += 1)
+    {
+      const { mounted } = setup({
+        initialEntries: [routes[i]],
+      });
+
+      expect(mounted.find(CommentSwitch).exists()).toBe(true);
+    }
+  });
+
+  test('routes beginning "/reviews" render ReviewSwitch', () =>
+  {
+    const routes = [
+      '/reviews',
+    ];
+
+    for (let i = 0; i < routes.length; i += 1)
+    {
+      const { mounted } = setup({
+        initialEntries: [routes[i]],
+      });
+
+      expect(mounted.find(ReviewSwitch).exists()).toBe(true);
+    }
+  });
+
+  test('routes beginning "/tags" render TagSwitch', () =>
+  {
+    const routes = [
+      '/tags',
+      '/tags/add',
+      '/tags/1',
+    ];
+
+    for (let i = 0; i < routes.length; i += 1)
+    {
+      const { mounted } = setup({
+        initialEntries: [routes[i]],
+      });
+
+      expect(mounted.find(TagSwitch).exists()).toBe(true);
+    }
+  });
+
+  test('routes beginning "/articles" render ArticleSwitch', () =>
+  {
+    const routes = [
+      '/articles',
+      '/articles/add',
+      '/articles/1',
+    ];
+
+    for (let i = 0; i < routes.length; i += 1)
+    {
+      const { mounted } = setup({
+        initialEntries: [routes[i]],
+      });
+
+      expect(mounted.find(ArticleSwitch).exists()).toBe(true);
+    }
+  });
+
+  test('routes beginning "/artists/:artistId/albums" render AlbumSwitch', () =>
+  {
+    const routes = [
+      '/artists/1/albums',
+      '/artists/1/albums/add',
+      '/artists/1/albums/1',
+    ];
+
+    for (let i = 0; i < routes.length; i += 1)
+    {
+      const { mounted } = setup({
+        initialEntries: [routes[i]],
+      });
+
+      expect(mounted.find(AlbumSwitch).exists()).toBe(true);
+    }
+  });
+
+  test('routes beginning "/artists" render ArtistSwitch', () =>
+  {
+    const routes = [
+      '/artists',
+      '/artists/add',
+      '/artists/1',
+    ];
+
+    for (let i = 0; i < routes.length; i += 1)
+    {
+      const { mounted } = setup({
+        initialEntries: [routes[i]],
+      });
+
+      expect(mounted.find(ArtistSwitch).exists()).toBe(true);
+    }
+  });
+
+  test('routes beginning "/" render HomeSwitch', () =>
+  {
+    const routes = [
+      '/',
+    ];
+
+    for (let i = 0; i < routes.length; i += 1)
+    {
+      const { mounted } = setup({
+        initialEntries: [routes[i]],
+      });
+
+      expect(mounted.find(HomeSwitch).exists()).toBe(true);
+    }
   });
 });
