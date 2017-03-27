@@ -1,13 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import createRouterContext from 'react-router-test-context';
 
 import Layout from '../layout';
 
 const setup = () =>
 {
-  const context = createRouterContext();
-  const wrapper = shallow(<Layout />, { context });
+  const wrapper = shallow(<Layout />);
 
   return {
     wrapper,
@@ -20,6 +18,6 @@ describe('Layout', () =>
   {
     const { wrapper } = setup();
 
-    expect(wrapper.exists()).toBe(true);
+    expect(wrapper).toMatchSnapshot();
   });
 });
