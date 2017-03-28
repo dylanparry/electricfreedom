@@ -1,22 +1,23 @@
 import React from 'react';
+import createContext from 'react-router-test-context';
 import { shallow, mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 
 import HomeSwitch from '../index';
 import Stats from '../stats';
 
-const setup = (propOverrides) =>
+const setup = (pathname = '/') =>
 {
   const wrapper = shallow(<HomeSwitch />);
 
-  const props = Object.assign({
-    initialEntries: ['/'],
-  }, propOverrides);
-  const mounted = mount((
-    <MemoryRouter {...props}>
-      <HomeSwitch />
-    </MemoryRouter>
-  ));
+  const options = {
+    context: createContext({
+      location: { pathname },
+    }),
+    childContextTypes: {
+      router: React.PropTypes.object,
+    },
+  };
+  const mounted = mount(<HomeSwitch />, options);
 
   return {
     wrapper,

@@ -1,24 +1,25 @@
 import React from 'react';
+import createContext from 'react-router-test-context';
 import { shallow, mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 
 import ArticleSwitch from '../index';
 import ArticleAdd from '../add';
 import ArticleEdit from '../edit';
 import ArticleList from '../list';
 
-const setup = (propOverrides) =>
+const setup = (pathname = '/') =>
 {
   const wrapper = shallow(<ArticleSwitch />);
 
-  const props = Object.assign({
-    initialEntries: ['/'],
-  }, propOverrides);
-  const mounted = mount((
-    <MemoryRouter {...props}>
-      <ArticleSwitch />
-    </MemoryRouter>
-  ));
+  const options = {
+    context: createContext({
+      location: { pathname },
+    }),
+    childContextTypes: {
+      router: React.PropTypes.object,
+    },
+  };
+  const mounted = mount(<ArticleSwitch />, options);
 
   return {
     wrapper,
@@ -37,9 +38,7 @@ describe('ArticleSwitch', () =>
 
   test('route "/articles/add" renders ArticleAdd', () =>
   {
-    const { mounted } = setup({
-      initialEntries: ['/articles/add'],
-    });
+    const { mounted } = setup('/articles/add');
 
     expect(mounted.find(ArticleAdd).exists()).toBe(true);
   });
@@ -48,9 +47,7 @@ describe('ArticleSwitch', () =>
   {
     for (let i = 1; i <= 5; i += 1)
     {
-      const { mounted } = setup({
-        initialEntries: [`/articles/${i}`],
-      });
+      const { mounted } = setup(`/articles/${i}`);
 
       const articleEdit = mounted.find(ArticleEdit);
       expect(articleEdit.exists()).toBe(true);
@@ -60,9 +57,7 @@ describe('ArticleSwitch', () =>
 
   test('route "/articles" renders ArticleList', () =>
   {
-    const { mounted } = setup({
-      initialEntries: ['/articles'],
-    });
+    const { mounted } = setup('/articles');
 
     expect(mounted.find(ArticleList).exists()).toBe(true);
   });

@@ -1,22 +1,23 @@
 import React from 'react';
+import createContext from 'react-router-test-context';
 import { shallow, mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 
 import UserSwitch from '../index';
 import UserList from '../list';
 
-const setup = (propOverrides) =>
+const setup = (pathname = '/') =>
 {
   const wrapper = shallow(<UserSwitch />);
 
-  const props = Object.assign({
-    initialEntries: ['/'],
-  }, propOverrides);
-  const mounted = mount((
-    <MemoryRouter {...props}>
-      <UserSwitch />
-    </MemoryRouter>
-  ));
+  const options = {
+    context: createContext({
+      location: { pathname },
+    }),
+    childContextTypes: {
+      router: React.PropTypes.object,
+    },
+  };
+  const mounted = mount(<UserSwitch />, options);
 
   return {
     wrapper,
@@ -35,9 +36,7 @@ describe('UserSwitch', () =>
 
   test('route "/users" renders UserList', () =>
   {
-    const { mounted } = setup({
-      initialEntries: ['/users'],
-    });
+    const { mounted } = setup('/users');
 
     expect(mounted.find(UserList).exists()).toBe(true);
   });

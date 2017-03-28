@@ -1,24 +1,25 @@
 import React from 'react';
+import createContext from 'react-router-test-context';
 import { shallow, mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 
 import TagSwitch from '../index';
 import TagAdd from '../add';
 import TagEdit from '../edit';
 import TagList from '../list';
 
-const setup = (propOverrides) =>
+const setup = (pathname = '/') =>
 {
   const wrapper = shallow(<TagSwitch />);
 
-  const props = Object.assign({
-    initialEntries: ['/'],
-  }, propOverrides);
-  const mounted = mount((
-    <MemoryRouter {...props}>
-      <TagSwitch />
-    </MemoryRouter>
-  ));
+  const options = {
+    context: createContext({
+      location: { pathname },
+    }),
+    childContextTypes: {
+      router: React.PropTypes.object,
+    },
+  };
+  const mounted = mount(<TagSwitch />, options);
 
   return {
     wrapper,
@@ -37,9 +38,7 @@ describe('TagSwitch', () =>
 
   test('route "/tags/add" renders TagAdd', () =>
   {
-    const { mounted } = setup({
-      initialEntries: ['/tags/add'],
-    });
+    const { mounted } = setup('/tags/add');
 
     expect(mounted.find(TagAdd).exists()).toBe(true);
   });
@@ -48,9 +47,7 @@ describe('TagSwitch', () =>
   {
     for (let i = 0; i <= 5; i += 1)
     {
-      const { mounted } = setup({
-        initialEntries: [`/tags/${i}`],
-      });
+      const { mounted } = setup(`/tags/${i}`);
 
       const tagEdit = mounted.find(TagEdit);
       expect(tagEdit.exists()).toBe(true);
@@ -60,9 +57,7 @@ describe('TagSwitch', () =>
 
   test('route "/tags" renders TagList', () =>
   {
-    const { mounted } = setup({
-      initialEntries: ['/tags'],
-    });
+    const { mounted } = setup('/tags');
 
     expect(mounted.find(TagList).exists()).toBe(true);
   });

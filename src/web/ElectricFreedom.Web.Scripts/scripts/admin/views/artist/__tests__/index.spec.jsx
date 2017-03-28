@@ -1,24 +1,25 @@
 import React from 'react';
+import createContext from 'react-router-test-context';
 import { shallow, mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 
 import ArtistSwitch from '../index';
 import ArtistAdd from '../add';
 import ArtistEdit from '../edit';
 import ArtistList from '../list';
 
-const setup = (propOverrides) =>
+const setup = (pathname = '/') =>
 {
   const wrapper = shallow(<ArtistSwitch />);
 
-  const props = Object.assign({
-    initialEntries: ['/'],
-  }, propOverrides);
-  const mounted = mount((
-    <MemoryRouter {...props}>
-      <ArtistSwitch />
-    </MemoryRouter>
-  ));
+  const options = {
+    context: createContext({
+      location: { pathname },
+    }),
+    childContextTypes: {
+      router: React.PropTypes.object,
+    },
+  };
+  const mounted = mount(<ArtistSwitch />, options);
 
   return {
     wrapper,
@@ -37,9 +38,7 @@ describe('ArtistSwitch', () =>
 
   test('route "/artists/add" renders ArtistAdd', () =>
   {
-    const { mounted } = setup({
-      initialEntries: ['/artists/add'],
-    });
+    const { mounted } = setup('/artists/add');
 
     expect(mounted.find(ArtistAdd).exists()).toBe(true);
   });
@@ -48,9 +47,7 @@ describe('ArtistSwitch', () =>
   {
     for (let i = 1; i <= 5; i += 1)
     {
-      const { mounted } = setup({
-        initialEntries: [`/artists/${i}`],
-      });
+      const { mounted } = setup(`/artists/${i}`);
 
       const artistEdit = mounted.find(ArtistEdit);
       expect(artistEdit.exists()).toBe(true);
@@ -60,9 +57,7 @@ describe('ArtistSwitch', () =>
 
   test('route "/artists" renders ArtistList', () =>
   {
-    const { mounted } = setup({
-      initialEntries: ['/artists'],
-    });
+    const { mounted } = setup('/artists');
 
     expect(mounted.find(ArtistList).exists()).toBe(true);
   });

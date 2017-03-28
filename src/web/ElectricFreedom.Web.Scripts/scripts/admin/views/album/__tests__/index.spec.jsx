@@ -1,24 +1,25 @@
 import React from 'react';
+import createContext from 'react-router-test-context';
 import { shallow, mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 
 import AlbumSwitch from '../index';
 import AlbumAdd from '../add';
 import AlbumEdit from '../edit';
 import AlbumList from '../list';
 
-const setup = (propOverrides) =>
+const setup = (pathname = '/') =>
 {
   const wrapper = shallow(<AlbumSwitch />);
 
-  const props = Object.assign({
-    initialEntries: ['/'],
-  }, propOverrides);
-  const mounted = mount((
-    <MemoryRouter {...props}>
-      <AlbumSwitch />
-    </MemoryRouter>
-  ));
+  const options = {
+    context: createContext({
+      location: { pathname },
+    }),
+    childContextTypes: {
+      router: React.PropTypes.object,
+    },
+  };
+  const mounted = mount(<AlbumSwitch />, options);
 
   return {
     wrapper,
@@ -39,9 +40,7 @@ describe('AlbumSwitch', () =>
   {
     for (let i = 1; i <= 5; i += 1)
     {
-      const { mounted } = setup({
-        initialEntries: [`/artists/${i}/albums/add`],
-      });
+      const { mounted } = setup(`/artists/${i}/albums/add`);
 
       const albumAdd = mounted.find(AlbumAdd);
       expect(albumAdd.exists()).toBe(true);
@@ -55,9 +54,7 @@ describe('AlbumSwitch', () =>
     {
       for (let j = 1; j <= 5; j += 1)
       {
-        const { mounted } = setup({
-          initialEntries: [`/artists/${i}/albums/${j}`],
-        });
+        const { mounted } = setup(`/artists/${i}/albums/${j}`);
 
         const albumEdit = mounted.find(AlbumEdit);
         expect(albumEdit.exists()).toBe(true);
@@ -71,9 +68,7 @@ describe('AlbumSwitch', () =>
   {
     for (let i = 1; i <= 5; i += 1)
     {
-      const { mounted } = setup({
-        initialEntries: [`/artists/${i}/albums`],
-      });
+      const { mounted } = setup(`/artists/${i}/albums`);
 
       const albumList = mounted.find(AlbumList);
       expect(albumList.exists()).toBe(true);
