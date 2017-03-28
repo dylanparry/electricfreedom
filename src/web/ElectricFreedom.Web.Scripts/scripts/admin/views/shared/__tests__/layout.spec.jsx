@@ -1,6 +1,6 @@
 import React from 'react';
 import createContext from 'react-router-test-context';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 import Layout from '../layout';
 import HomeSwitch from '../../home';
@@ -14,8 +14,6 @@ import UserSwitch from '../../user';
 
 const setup = (pathname = '/') =>
 {
-  const wrapper = shallow(<Layout />);
-
   const options = {
     context: createContext({
       location: { pathname },
@@ -24,11 +22,10 @@ const setup = (pathname = '/') =>
       router: React.PropTypes.object,
     },
   };
-  const mounted = mount(<Layout />, options);
+  const wrapper = mount(<Layout />, options);
 
   return {
     wrapper,
-    mounted,
   };
 };
 
@@ -38,7 +35,7 @@ describe('Layout', () =>
   {
     const { wrapper } = setup();
 
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.exists()).toBe(true);
   });
 
   test('routes beginning "/users" render UserSwitch', () =>
@@ -49,9 +46,9 @@ describe('Layout', () =>
 
     for (let i = 0; i < routes.length; i += 1)
     {
-      const { mounted } = setup(routes[i]);
+      const { wrapper } = setup(routes[i]);
 
-      expect(mounted.find(UserSwitch).exists()).toBe(true);
+      expect(wrapper.find(UserSwitch).exists()).toBe(true);
     }
   });
 
@@ -63,9 +60,9 @@ describe('Layout', () =>
 
     for (let i = 0; i < routes.length; i += 1)
     {
-      const { mounted } = setup(routes[i]);
+      const { wrapper } = setup(routes[i]);
 
-      expect(mounted.find(CommentSwitch).exists()).toBe(true);
+      expect(wrapper.find(CommentSwitch).exists()).toBe(true);
     }
   });
 
@@ -77,9 +74,9 @@ describe('Layout', () =>
 
     for (let i = 0; i < routes.length; i += 1)
     {
-      const { mounted } = setup(routes[i]);
+      const { wrapper } = setup(routes[i]);
 
-      expect(mounted.find(ReviewSwitch).exists()).toBe(true);
+      expect(wrapper.find(ReviewSwitch).exists()).toBe(true);
     }
   });
 
@@ -93,9 +90,9 @@ describe('Layout', () =>
 
     for (let i = 0; i < routes.length; i += 1)
     {
-      const { mounted } = setup(routes[i]);
+      const { wrapper } = setup(routes[i]);
 
-      expect(mounted.find(TagSwitch).exists()).toBe(true);
+      expect(wrapper.find(TagSwitch).exists()).toBe(true);
     }
   });
 
@@ -109,9 +106,9 @@ describe('Layout', () =>
 
     for (let i = 0; i < routes.length; i += 1)
     {
-      const { mounted } = setup(routes[i]);
+      const { wrapper } = setup(routes[i]);
 
-      expect(mounted.find(ArticleSwitch).exists()).toBe(true);
+      expect(wrapper.find(ArticleSwitch).exists()).toBe(true);
     }
   });
 
@@ -125,9 +122,9 @@ describe('Layout', () =>
 
     for (let i = 0; i < routes.length; i += 1)
     {
-      const { mounted } = setup(routes[i]);
+      const { wrapper } = setup(routes[i]);
 
-      expect(mounted.find(AlbumSwitch).exists()).toBe(true);
+      expect(wrapper.find(AlbumSwitch).exists()).toBe(true);
     }
   });
 
@@ -141,9 +138,9 @@ describe('Layout', () =>
 
     for (let i = 0; i < routes.length; i += 1)
     {
-      const { mounted } = setup(routes[i]);
+      const { wrapper } = setup(routes[i]);
 
-      expect(mounted.find(ArtistSwitch).exists()).toBe(true);
+      expect(wrapper.find(ArtistSwitch).exists()).toBe(true);
     }
   });
 
@@ -155,9 +152,9 @@ describe('Layout', () =>
 
     for (let i = 0; i < routes.length; i += 1)
     {
-      const { mounted } = setup(routes[i]);
+      const { wrapper } = setup(routes[i]);
 
-      expect(mounted.find(HomeSwitch).exists()).toBe(true);
+      expect(wrapper.find(HomeSwitch).exists()).toBe(true);
     }
   });
 });

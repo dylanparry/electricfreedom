@@ -1,14 +1,12 @@
 import React from 'react';
 import createContext from 'react-router-test-context';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 import HomeSwitch from '../index';
 import Stats from '../stats';
 
 const setup = (pathname = '/') =>
 {
-  const wrapper = shallow(<HomeSwitch />);
-
   const options = {
     context: createContext({
       location: { pathname },
@@ -17,11 +15,10 @@ const setup = (pathname = '/') =>
       router: React.PropTypes.object,
     },
   };
-  const mounted = mount(<HomeSwitch />, options);
+  const wrapper = mount(<HomeSwitch />, options);
 
   return {
     wrapper,
-    mounted,
   };
 };
 
@@ -31,13 +28,13 @@ describe('HomeSwitch', () =>
   {
     const { wrapper } = setup();
 
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.exists()).toBe(true);
   });
 
   test('route "/" renders Stats', () =>
   {
-    const { mounted } = setup();
+    const { wrapper } = setup();
 
-    expect(mounted.find(Stats).exists()).toBe(true);
+    expect(wrapper.find(Stats).exists()).toBe(true);
   });
 });

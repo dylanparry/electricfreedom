@@ -1,14 +1,12 @@
 import React from 'react';
 import createContext from 'react-router-test-context';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 import CommentSwitch from '../index';
 import CommentList from '../list';
 
 const setup = (pathname = '/') =>
 {
-  const wrapper = shallow(<CommentSwitch />);
-
   const options = {
     context: createContext({
       location: { pathname },
@@ -17,11 +15,10 @@ const setup = (pathname = '/') =>
       router: React.PropTypes.object,
     },
   };
-  const mounted = mount(<CommentSwitch />, options);
+  const wrapper = mount(<CommentSwitch />, options);
 
   return {
     wrapper,
-    mounted,
   };
 };
 
@@ -31,13 +28,13 @@ describe('CommentSwitch', () =>
   {
     const { wrapper } = setup();
 
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.exists()).toBe(true);
   });
 
   test('route "/comments" renders CommentList', () =>
   {
-    const { mounted } = setup('/comments');
+    const { wrapper } = setup('/comments');
 
-    expect(mounted.find(CommentList).exists()).toBe(true);
+    expect(wrapper.find(CommentList).exists()).toBe(true);
   });
 });

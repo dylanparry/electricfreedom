@@ -1,6 +1,6 @@
 import React from 'react';
 import createContext from 'react-router-test-context';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 import ArticleSwitch from '../index';
 import ArticleAdd from '../add';
@@ -9,8 +9,6 @@ import ArticleList from '../list';
 
 const setup = (pathname = '/') =>
 {
-  const wrapper = shallow(<ArticleSwitch />);
-
   const options = {
     context: createContext({
       location: { pathname },
@@ -19,11 +17,10 @@ const setup = (pathname = '/') =>
       router: React.PropTypes.object,
     },
   };
-  const mounted = mount(<ArticleSwitch />, options);
+  const wrapper = mount(<ArticleSwitch />, options);
 
   return {
     wrapper,
-    mounted,
   };
 };
 
@@ -33,23 +30,23 @@ describe('ArticleSwitch', () =>
   {
     const { wrapper } = setup();
 
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.exists()).toBe(true);
   });
 
   test('route "/articles/add" renders ArticleAdd', () =>
   {
-    const { mounted } = setup('/articles/add');
+    const { wrapper } = setup('/articles/add');
 
-    expect(mounted.find(ArticleAdd).exists()).toBe(true);
+    expect(wrapper.find(ArticleAdd).exists()).toBe(true);
   });
 
   test('route "/articles/:articleId" renders ArticleEdit', () =>
   {
     for (let i = 1; i <= 5; i += 1)
     {
-      const { mounted } = setup(`/articles/${i}`);
+      const { wrapper } = setup(`/articles/${i}`);
 
-      const articleEdit = mounted.find(ArticleEdit);
+      const articleEdit = wrapper.find(ArticleEdit);
       expect(articleEdit.exists()).toBe(true);
       expect(articleEdit.props().match.params.articleId).toBe(i.toString());
     }
@@ -57,8 +54,8 @@ describe('ArticleSwitch', () =>
 
   test('route "/articles" renders ArticleList', () =>
   {
-    const { mounted } = setup('/articles');
+    const { wrapper } = setup('/articles');
 
-    expect(mounted.find(ArticleList).exists()).toBe(true);
+    expect(wrapper.find(ArticleList).exists()).toBe(true);
   });
 });

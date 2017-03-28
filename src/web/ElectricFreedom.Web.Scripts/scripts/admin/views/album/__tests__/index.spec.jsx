@@ -1,6 +1,6 @@
 import React from 'react';
 import createContext from 'react-router-test-context';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 import AlbumSwitch from '../index';
 import AlbumAdd from '../add';
@@ -9,8 +9,6 @@ import AlbumList from '../list';
 
 const setup = (pathname = '/') =>
 {
-  const wrapper = shallow(<AlbumSwitch />);
-
   const options = {
     context: createContext({
       location: { pathname },
@@ -19,11 +17,10 @@ const setup = (pathname = '/') =>
       router: React.PropTypes.object,
     },
   };
-  const mounted = mount(<AlbumSwitch />, options);
+  const wrapper = mount(<AlbumSwitch />, options);
 
   return {
     wrapper,
-    mounted,
   };
 };
 
@@ -33,16 +30,16 @@ describe('AlbumSwitch', () =>
   {
     const { wrapper } = setup();
 
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.exists()).toBe(true);
   });
 
   test('route "/artists/:artistId/albums/add" renders AlbumAdd', () =>
   {
     for (let i = 1; i <= 5; i += 1)
     {
-      const { mounted } = setup(`/artists/${i}/albums/add`);
+      const { wrapper } = setup(`/artists/${i}/albums/add`);
 
-      const albumAdd = mounted.find(AlbumAdd);
+      const albumAdd = wrapper.find(AlbumAdd);
       expect(albumAdd.exists()).toBe(true);
       expect(albumAdd.props().match.params.artistId).toBe(i.toString());
     }
@@ -54,9 +51,9 @@ describe('AlbumSwitch', () =>
     {
       for (let j = 1; j <= 5; j += 1)
       {
-        const { mounted } = setup(`/artists/${i}/albums/${j}`);
+        const { wrapper } = setup(`/artists/${i}/albums/${j}`);
 
-        const albumEdit = mounted.find(AlbumEdit);
+        const albumEdit = wrapper.find(AlbumEdit);
         expect(albumEdit.exists()).toBe(true);
         expect(albumEdit.props().match.params.artistId).toBe(i.toString());
         expect(albumEdit.props().match.params.albumId).toBe(j.toString());
@@ -68,9 +65,9 @@ describe('AlbumSwitch', () =>
   {
     for (let i = 1; i <= 5; i += 1)
     {
-      const { mounted } = setup(`/artists/${i}/albums`);
+      const { wrapper } = setup(`/artists/${i}/albums`);
 
-      const albumList = mounted.find(AlbumList);
+      const albumList = wrapper.find(AlbumList);
       expect(albumList.exists()).toBe(true);
       expect(albumList.props().match.params.artistId).toBe(i.toString());
     }

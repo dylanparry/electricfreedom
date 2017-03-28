@@ -1,14 +1,12 @@
 import React from 'react';
 import createContext from 'react-router-test-context';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 import ReviewSwitch from '../index';
 import ReviewList from '../list';
 
 const setup = (pathname = '/') =>
 {
-  const wrapper = shallow(<ReviewSwitch />);
-
   const options = {
     context: createContext({
       location: { pathname },
@@ -17,11 +15,10 @@ const setup = (pathname = '/') =>
       router: React.PropTypes.object,
     },
   };
-  const mounted = mount(<ReviewSwitch />, options);
+  const wrapper = mount(<ReviewSwitch />, options);
 
   return {
     wrapper,
-    mounted,
   };
 };
 
@@ -31,13 +28,13 @@ describe('ReviewSwitch', () =>
   {
     const { wrapper } = setup();
 
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.exists()).toBe(true);
   });
 
   test('route "/reviews" renders ReviewList', () =>
   {
-    const { mounted } = setup('/reviews');
+    const { wrapper } = setup('/reviews');
 
-    expect(mounted.find(ReviewList).exists()).toBe(true);
+    expect(wrapper.find(ReviewList).exists()).toBe(true);
   });
 });
