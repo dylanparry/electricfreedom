@@ -1,0 +1,352 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout render 1`] = `
+<layout>
+  <div>
+    <p>
+      My App
+    </p>
+    <menu>
+      <ul>
+        <li>
+          <Link
+            replace={false}
+            to="/"
+          >
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              Home
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link
+            replace={false}
+            to="/artists"
+          >
+            <a
+              href="/artists"
+              onClick={[Function]}
+            >
+              Artists
+            </a>
+          </Link>
+          <ul>
+            <li>
+              <Link
+                replace={false}
+                to="/artists/add"
+              >
+                <a
+                  href="/artists/add"
+                  onClick={[Function]}
+                >
+                  Add Artist
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link
+                replace={false}
+                to="/artists/1"
+              >
+                <a
+                  href="/artists/1"
+                  onClick={[Function]}
+                >
+                  Edit Artist
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link
+                replace={false}
+                to="/artists/1/albums"
+              >
+                <a
+                  href="/artists/1/albums"
+                  onClick={[Function]}
+                >
+                  Albums
+                </a>
+              </Link>
+              <ul>
+                <li>
+                  <Link
+                    replace={false}
+                    to="/artists/1/albums/add"
+                  >
+                    <a
+                      href="/artists/1/albums/add"
+                      onClick={[Function]}
+                    >
+                      Add Album
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    replace={false}
+                    to="/artists/1/albums/1"
+                  >
+                    <a
+                      href="/artists/1/albums/1"
+                      onClick={[Function]}
+                    >
+                      Edit Album
+                    </a>
+                  </Link>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <Link
+            replace={false}
+            to="/articles"
+          >
+            <a
+              href="/articles"
+              onClick={[Function]}
+            >
+              Articles
+            </a>
+          </Link>
+          <ul>
+            <li>
+              <Link
+                replace={false}
+                to="/articles/add"
+              >
+                <a
+                  href="/articles/add"
+                  onClick={[Function]}
+                >
+                  Add Article
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link
+                replace={false}
+                to="/articles/1"
+              >
+                <a
+                  href="/articles/1"
+                  onClick={[Function]}
+                >
+                  Edit Article
+                </a>
+              </Link>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <Link
+            replace={false}
+            to="/tags"
+          >
+            <a
+              href="/tags"
+              onClick={[Function]}
+            >
+              Tags
+            </a>
+          </Link>
+          <ul>
+            <li>
+              <Link
+                replace={false}
+                to="/tags/add"
+              >
+                <a
+                  href="/tags/add"
+                  onClick={[Function]}
+                >
+                  Add Tag
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link
+                replace={false}
+                to="/tags/1"
+              >
+                <a
+                  href="/tags/1"
+                  onClick={[Function]}
+                >
+                  Edit Tag
+                </a>
+              </Link>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <Link
+            replace={false}
+            to="/reviews"
+          >
+            <a
+              href="/reviews"
+              onClick={[Function]}
+            >
+              Reviews
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link
+            replace={false}
+            to="/comments"
+          >
+            <a
+              href="/comments"
+              onClick={[Function]}
+            >
+              Comments
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link
+            replace={false}
+            to="/users"
+          >
+            <a
+              href="/users"
+              onClick={[Function]}
+            >
+              Users
+            </a>
+          </Link>
+        </li>
+      </ul>
+    </menu>
+    <Switch>
+      <Route
+        component={[Function]}
+        computedMatch={
+          Object {
+            "isExact": true,
+            "params": Object {},
+            "path": "/",
+            "url": "/",
+          }
+        }
+        location={
+          Object {
+            "hash": "",
+            "key": null,
+            "pathname": "/",
+            "search": "",
+          }
+        }
+        path="/"
+      >
+        <homeSwitch
+          history={
+            Object {
+              "_listeners": Array [],
+              "_notifyListeners": [Function],
+              "action": "POP",
+              "createHref": [Function],
+              "listen": [Function],
+              "location": Object {
+                "hash": "",
+                "key": null,
+                "pathname": "/",
+                "search": "",
+              },
+              "push": [Function],
+              "replace": [Function],
+            }
+          }
+          location={
+            Object {
+              "hash": "",
+              "key": null,
+              "pathname": "/",
+              "search": "",
+            }
+          }
+          match={
+            Object {
+              "isExact": true,
+              "params": Object {},
+              "path": "/",
+              "url": "/",
+            }
+          }
+        >
+          <Switch>
+            <Route
+              component={[Function]}
+              computedMatch={
+                Object {
+                  "isExact": true,
+                  "params": Object {},
+                  "path": "/",
+                  "url": "/",
+                }
+              }
+              location={
+                Object {
+                  "hash": "",
+                  "key": null,
+                  "pathname": "/",
+                  "search": "",
+                }
+              }
+              path="/"
+            >
+              <stats
+                history={
+                  Object {
+                    "_listeners": Array [],
+                    "_notifyListeners": [Function],
+                    "action": "POP",
+                    "createHref": [Function],
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "key": null,
+                      "pathname": "/",
+                      "search": "",
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                location={
+                  Object {
+                    "hash": "",
+                    "key": null,
+                    "pathname": "/",
+                    "search": "",
+                  }
+                }
+                match={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+              >
+                <p>
+                  Statistics
+                </p>
+              </stats>
+            </Route>
+          </Switch>
+        </homeSwitch>
+      </Route>
+    </Switch>
+  </div>
+</layout>
+`;

@@ -1,5 +1,6 @@
 import React from 'react';
 import createContext from 'react-router-test-context';
+import toJson from 'enzyme-to-json';
 import { mount } from 'enzyme';
 
 import Layout from '../layout';
@@ -16,7 +17,7 @@ const setup = (pathname = '/') =>
 {
   const options = {
     context: createContext({
-      location: { pathname },
+      location: { pathname, key: null },
     }),
     childContextTypes: {
       router: React.PropTypes.object,
@@ -26,6 +27,7 @@ const setup = (pathname = '/') =>
 
   return {
     wrapper,
+    snapshot: toJson(wrapper),
   };
 };
 
@@ -33,9 +35,9 @@ describe('Layout', () =>
 {
   test('render', () =>
   {
-    const { wrapper } = setup();
+    const { snapshot } = setup();
 
-    expect(wrapper.exists()).toBe(true);
+    expect(snapshot).toMatchSnapshot();
   });
 
   test('routes beginning "/users" render UserSwitch', () =>

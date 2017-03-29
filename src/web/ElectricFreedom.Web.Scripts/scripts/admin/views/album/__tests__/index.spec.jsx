@@ -1,5 +1,6 @@
 import React from 'react';
 import createContext from 'react-router-test-context';
+import toJson from 'enzyme-to-json';
 import { mount } from 'enzyme';
 
 import AlbumSwitch from '../index';
@@ -21,6 +22,7 @@ const setup = (pathname = '/') =>
 
   return {
     wrapper,
+    snapshot: toJson(wrapper),
   };
 };
 
@@ -28,9 +30,9 @@ describe('AlbumSwitch', () =>
 {
   test('render', () =>
   {
-    const { wrapper } = setup();
+    const { snapshot } = setup();
 
-    expect(wrapper.exists()).toBe(true);
+    expect(snapshot).toMatchSnapshot();
   });
 
   test('route "/artists/:artistId/albums/add" renders AlbumAdd', () =>

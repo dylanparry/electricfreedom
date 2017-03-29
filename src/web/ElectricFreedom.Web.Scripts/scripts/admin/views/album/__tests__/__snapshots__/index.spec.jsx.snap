@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AlbumSwitch render 1`] = `
+<albumSwitch>
+  <Switch />
+</albumSwitch>
+`;

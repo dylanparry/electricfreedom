@@ -1,4 +1,5 @@
 import React from 'react';
+import toJson from 'enzyme-to-json';
 import { shallow } from 'enzyme';
 
 import ArtistEdit from '../edit';
@@ -9,6 +10,7 @@ const setup = () =>
 
   return {
     wrapper,
+    snapshot: toJson(wrapper),
   };
 };
 
@@ -16,8 +18,8 @@ describe('ArtistEdit', () =>
 {
   test('render', () =>
   {
-    const { wrapper } = setup();
+    const { snapshot } = setup();
 
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshot).toMatchSnapshot();
   });
 });

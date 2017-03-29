@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeSwitch render 1`] = `
+<homeSwitch>
+  <Switch>
+    <Route
+      component={[Function]}
+      computedMatch={
+        Object {
+          "isExact": true,
+          "params": Object {},
+          "path": "/",
+          "url": "/",
+        }
+      }
+      location={
+        Object {
+          "hash": "",
+          "key": null,
+          "pathname": "/",
+          "search": "",
+        }
+      }
+      path="/"
+    >
+      <stats
+        history={
+          Object {
+            "_listeners": Array [],
+            "_notifyListeners": [Function],
+            "action": "POP",
+            "createHref": [Function],
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": null,
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+        location={
+          Object {
+            "hash": "",
+            "key": null,
+            "pathname": "/",
+            "search": "",
+          }
+        }
+        match={
+          Object {
+            "isExact": true,
+            "params": Object {},
+            "path": "/",
+            "url": "/",
+          }
+        }
+      >
+        <p>
+          Statistics
+        </p>
+      </stats>
+    </Route>
+  </Switch>
+</homeSwitch>
+`;
