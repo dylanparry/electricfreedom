@@ -7,6 +7,7 @@
     "dev": "webpack --watch --progress --colors",
     "build": "webpack -p --progress --colors --env.production",
     "test": "jest",
+    "test:ci": "jest --runInBand --forceExit",
     "lint": "eslint ./ --ext .jsx,.js"
   },
   "dependencies": {

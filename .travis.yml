@@ -33,4 +33,4 @@ script:
   # Restore Yarn packages
   - yarn --ignore-optional
   # Run Javascript tests
-  - yarn test
+  - yarn test:ci
