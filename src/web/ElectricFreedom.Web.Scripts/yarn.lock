@@ -3095,9 +3095,9 @@ mobx@2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/mobx/-/mobx-2.5.1.tgz#19af156c551f0add1cc7d7ffd10aa4f41c0f5c0a"
 
-mobx@^3.1.8:
-  version "3.1.8"
-  resolved "https://registry.yarnpkg.com/mobx/-/mobx-3.1.8.tgz#94a24ce41baa9d0ccf3bd71b17dbe093bb0e1b05"
+mobx@^3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-3.1.9.tgz#ed4af9d874ff6032c7af91fc1b87d9d33122a557"
 
 moxios@^0.4.0:
   version "0.4.0"
