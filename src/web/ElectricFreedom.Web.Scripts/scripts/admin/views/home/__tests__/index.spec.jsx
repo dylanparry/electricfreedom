@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import createContext from 'react-router-test-context';
 import toJson from 'enzyme-to-json';
 import { mount } from 'enzyme';
@@ -13,7 +14,7 @@ const setup = (pathname = '/') =>
       location: { pathname, key: null },
     }),
     childContextTypes: {
-      router: React.PropTypes.object,
+      router: PropTypes.object,
     },
   };
   const wrapper = mount(<HomeSwitch />, options);
