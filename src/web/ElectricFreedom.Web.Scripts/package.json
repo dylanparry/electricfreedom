@@ -11,7 +11,7 @@
     "lint": "eslint ./ --ext .jsx,.js"
   },
   "dependencies": {
-    "axios": "^0.16.0",
+    "axios": "^0.16.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.1",
     "babel-jest": "^19.0.0",
