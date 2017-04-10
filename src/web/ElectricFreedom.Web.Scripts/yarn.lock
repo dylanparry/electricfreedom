@@ -3065,9 +3065,9 @@ mobx-react@3.5.6:
   dependencies:
     hoist-non-react-statics "^1.2.0"
 
-mobx-react@^4.1.5:
-  version "4.1.5"
-  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-4.1.5.tgz#75cf4dbffc91b9cb23d56c060dfd8d2ca52450dc"
+mobx-react@^4.1.7:
+  version "4.1.7"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-4.1.7.tgz#06ef67074e2bc56e8e997a944f113070430ba5dd"
   dependencies:
     hoist-non-react-statics "^1.2.0"
 
@@ -3497,13 +3497,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.2, prop-types@~15.5.0:
-  version "15.5.4"
-  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.4.tgz#2ed3692716a5060f8cc020946d8238e7419d92c0"
-  dependencies:
-    fbjs "^0.8.9"
-
-prop-types@^15.5.6:
+prop-types@^15.5.2, prop-types@^15.5.6, prop-types@~15.5.0:
   version "15.5.6"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.6.tgz#797a915b1714b645ebb7c5d6cc690346205bd2aa"
   dependencies:
