@@ -48,6 +48,7 @@ const config = [
         'axios',
         'mobx',
         'mobx-react',
+        'prop-types',
         'react',
         'react-dom',
         'react-router',
