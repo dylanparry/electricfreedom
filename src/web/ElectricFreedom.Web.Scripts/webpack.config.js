@@ -52,6 +52,7 @@ const config = [
         'react',
         'react-dom',
         'react-router',
+        'react-router-dom',
         'styled-components',
       ],
     },
